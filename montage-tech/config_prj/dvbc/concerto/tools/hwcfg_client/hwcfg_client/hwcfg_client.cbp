@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="hwcfg_client" />
+		<Option pch_mode="2" />
+		<Option compiler="mips24k" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin\Release\hwcfg_client" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="mips24k" />
+				<Compiler>
+					<Add option="-O2 -EL -march=mips32r2 -mxgot -mabi=32 -mlong-calls -mno-abicalls -Wall -Wno-pointer-sign  -g -DARCH=CONCERTO  -DASSERT_ON -DPRINT_ON -D_ASSEMBLER_ -DCACHE_INIT -DTLB_INIT -ffunction-sections -D${HW_PLATFORM}" />
+					<Add option="-DCONCERTO" />
+					<Add directory='&quot;${PROJECT_LOC}\inc&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\kware&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\kware\ts_seq&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\os&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\hal&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\drv&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\drv\drvbase&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\hal\arch&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\util\libc&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\util&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\mdl&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\firmware&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\ap&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\util\log&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\drv\bus&quot;' />
+				</Compiler>
+				<Linker>
+					<Add option="--oformat elf32-tradlittlemips --gc-sections -nostdlib -T${PROJECT_DIR}\link.lds -o hwcfg_client.elf -Map hwcfg_client.map" />
+					<Add library="core_jasmine_drv" />
+					<Add library="eva_drv_w" />
+					<Add library="eva_mdl_concerto" />
+					<Add library="c" />
+					<Add library="m" />
+					<Add library="gcc" />
+					<Add library="_usb" />
+					<Add library="core_jasmine_drv_open" />
+					<Add directory="${PROJECT_LOC}\lib\lib_concerto" />
+					<Add directory='&quot;${PROJECT_LOC}\lib\lib_mips24k&quot;' />
+				</Linker>
+				<ExtraCommands>
+					<Add after="sh ${PROJECT_DIR}/post_build.sh ${ProjName}.elf" />
+				</ExtraCommands>
+				<Environment>
+					<Variable name="PROJECT_LOC" value="${PROJECT_DIR}..\..\..\..\..\.." />
+					<Variable name="ProjName" value="hwcfg_client" />
+				</Environment>
+			</Target>
+		</Build>
+		<Unit filename="..\..\..\..\..\..\prj\dvbc\jasmine_demo\tools\client\hwcfg\ap_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\prj\dvbc\jasmine_demo\tools\client\hwcfg\main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\prj\dvbc\jasmine_demo\tools\client\hwcfg\sys_cfg.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

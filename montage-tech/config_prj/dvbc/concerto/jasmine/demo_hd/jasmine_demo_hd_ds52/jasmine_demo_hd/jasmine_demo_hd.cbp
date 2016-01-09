@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="jasmine_demo_hd" />
+		<Option pch_mode="2" />
+		<Option compiler="mips24k" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin\Release\jasmine_demo_hd" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="mips24k" />
+				<Compiler>
+					<Add option="-EL -march=mips32r2 -mxgot -mabi=32 -mlong-calls -mno-abicalls -Wall -Wno-pointer-sign -Werror -O2 -g -DARCH=CONCERTO  -DASSERT_ON -D_ASSEMBLER_ -DCACHE_INIT -DTLB_INIT -ffunction-sections -D${HW_PLATFORM}" />
+					<Add option='-MMD -MP -MF&quot;$object.d&quot; -MT&quot;$object.d&quot;' />
+					<Add option="-DVFONT" />
+					<Add option="-DENABLE_FILE_PLAY" />
+					<Add option="-DENABLE_MUSIC_PIC_CONFIG" />
+					<Add option="-DUSE_AV_OS" />
+					<Add option="-DBOUQUET_SUPPORT" />
+					<Add option="-DAUTO_FACTORY_DEFAULT" />
+					<Add option="-DCONCERTO_144_B" />
+					<Add option="-DENABLE_PVR_REC_CONFIG" />
+					<Add option="-DENABLE_TIMESHIFT_CONFIG" />
+					<Add option="-DENABLE_USB_CONFIG" />
+					<Add option="-DTEMP_SUPPORT_DS_AD" />
+					<Add option="-DENABLE_CA" />
+					<Add option="-DENABLE_ADS" />
+					<Add option="-DDESAI_56_CA" />
+					<Add option="-DASSERT_ON" />
+					<Add option="-DPRINTF_INFO" />
+					<Add option="-DPRINT_ON" />
+					<Add option="-DENABLE_UI_MEDIA" />
+					<Add option="-DHW_ROLL_TIMER" />
+					<Add option="-DCA_SET_ECM_EMM_WAIT_LOCKED" />
+					<Add directory='&quot;${PROJECT_LOC}\inc\kware&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\kware\ads&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\kware\ads\ads_desai_2.2\inc&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\inc&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\ap&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\api&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\drv&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\drv\bus&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\drv\drvbase&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\drv\secure&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\firmware&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\hal&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\hal\arch&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\kware\ts_seq&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\mdl&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\mdl\eva&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\mdl\filters&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\mdl\mmi&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\os&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\util&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\util\iconv&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\util\log&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\ap\scan&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\firmware\core\include&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\ads\desai2.2&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\firmware\pic_16f7x&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\mdl\mmi\gui\vfont\inc&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\mdl\mmi\gui\vfont\inc\freetype&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\mdl\mmi\gui\vfont\inc\freetype\internal&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\mdl\vfs&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\drv\drvbase&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\kware\cas&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\ap&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\ca&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\ca\desai_5.2&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\database&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\includes&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\includes\ms&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\sysstatus&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\ui&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\user_table&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\inc\api&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\inc\mdl\filters&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\inc\mdl&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\includes\memmap_hd_8m_128m&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\mdl\mmi\gui\resource\vf&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\kware\subt_ttx&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\emon_cmd&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\demux&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\kware\cas&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\kware\file_playback&quot;' />
+				</Compiler>
+				<Linker>
+					<Add option="--oformat elf32-tradlittlemips --gc-sections -nostdlib -T${PROJECT_DIR}\link.lds -o jasmine_demo_hd.elf -Map jasmine_demo_hd.map" />
+					<Add library="RecordSeq" />
+					<Add library="eva_drv_concerto" />
+					<Add library="eva_mdl_concerto" />
+					<Add library="core_jasmine_drv" />
+					<Add library="core_jasmine_drv_open" />
+					<Add library="MDemuxLite" />
+					<Add library="gcc" />
+					<Add library="m" />
+					<Add library="PlaybackSeqLite" />
+					<Add library="ft_24k" />
+					<Add library="mgcaslib_v423_CC6000-M-Montage" />
+					<Add library="_usb" />
+					<Add library="log_dummy" />
+					<Add library="core_ap_mdl" />
+					<Add library="core_ap_mdl_mt" />
+					<Add library="dsca_5.2" />
+					<Add library="ds_ads_2" />
+					<Add library="c" />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\lib&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\lib\lib_concerto\lib_net&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\lib\lib_concerto&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\lib\lib_mips24k&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\lib&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\lib\lib_kware\mips24k&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\kware\ads\ads_desai_2.2\lib&quot;' />
+				</Linker>
+				<ExtraCommands>
+					<Add before="touch ${PROJECT_DIR}../../../../../../../prj/dvbc/jasmine_demo/sources/mips/main.c" />
+					<Add before="sh ${PROJECT_DIR}/pre_build.sh" />
+					<Add after="sh ${PROJECT_DIR}/post_build.sh ${ProjName}.elf" />
+					<Mode after="always" />
+				</ExtraCommands>
+				<Environment>
+					<Variable name="PROJECT_LOC" value="${PROJECT_DIR}..\..\..\..\..\..\.." />
+					<Variable name="HW_PLATFORM" value="CHIP" />
+					<Variable name="ProjName" value="jasmine_demo_hd" />
+				</Environment>
+			</Target>
+		</Build>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ads\desai2.2\config_ads.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ads\desai2.2\config_ads.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ads\desai2.2\ui_ads_display.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ads\desai2.2\ui_ads_display.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ap\Ap_usb_upgrade_impl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ap\ap_cas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ap\ap_cas_impl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ap\ap_framework_impl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ap\ap_nit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ap\ap_nit.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ap\ap_playback_impl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ap\ap_scan_impl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ap\ap_signal_mon_impl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ap\ap_table_parse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ap\ap_table_parse.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ap\ap_time_impl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ap\ap_uio_impl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ap\ap_upgrade_impl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\cas_manager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\cas_manager.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\cas_manager_impl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\config_cas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\config_cas.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\nit_logic_num.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_ca_card_info.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_ca_card_info.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_ca_entitle_info.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_ca_entitle_info.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_ca_finger.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_ca_finger.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_ca_ippv_ppt_dlg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_ca_ippv_ppt_dlg.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_ca_prompt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_ca_prompt.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_ca_public.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_ca_public.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_ca_super_osd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_ca_super_osd.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_conditional_accept.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_conditional_accept.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_conditional_accept_antiauth.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_conditional_accept_antiauth.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_conditional_accept_info.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_conditional_accept_info.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_conditional_accept_level.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_conditional_accept_level.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_conditional_accept_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_conditional_accept_pin.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_conditional_accept_update.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_conditional_accept_update.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_conditional_accept_worktime.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_conditional_accept_worktime.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_email_mess.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_email_mess.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_new_mail.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\desai_5.2\ui_new_mail.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\ui_ca_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ca\ui_ca_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\customer\demo_hd_ds52\customer_config_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\database\db_dvbs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\database\db_dvbs.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\demux\app_demux.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\demux\app_demux.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\emon_cmd\cmd_dmx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\emon_cmd\cmd_dmx.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\emon_cmd\cmd_entry.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\emon_cmd\cmd_entry.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\emon_cmd\cmd_ir.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\emon_cmd\cmd_ir.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\emon_cmd\cmd_system.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\emon_cmd\cmd_system.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\emon_cmd\emon_cmd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\emon_cmd\emon_cmd.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\emon_cmd\emon_hist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\ads\ads_adapter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\ads\ads_adapter.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\ads\ads_desai_2.2\inc\ads_api_desai.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\ads\ads_desai_2.2\inc\ads_desai_include.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\ads\ads_desai_2.2\src\ads_adt_desai.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\ads\ads_desai_2.2\src\ads_drv_desai.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\ads\ads_ware.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\cas_adapter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\inc\bmp_id.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\inc\cas_porting_drv_base.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\inc\cas_porting_drv_demux.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\inc\cas_porting_drv_os.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\inc\cas_porting_drv_smc.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\inc\desai_ca5.2_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\inc\ds_cas_include_v5.2.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\inc\font_id.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\inc\language_id.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\inc\str_id.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\src\cas_porting_drv_base.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\src\cas_porting_drv_demux.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\src\cas_porting_drv_os.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\src\cas_porting_drv_smc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\src\ds_cas_adt_v5.2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\kware\cas\desaicas52_src\src\ds_cas_drv_v5.2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\sources\ap_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\sources\customer_config.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\sources\mem_cfg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\sources\mips\main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\sources\sys_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\sources\ttx_font_hd_vsb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\sysstatus\sys_status.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\sysstatus\sys_status.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\factory_prv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\game_othello.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\game_othello.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\palette_id.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_ad_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_ad_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_audio_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_audio_set.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_auto_search.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_auto_search.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_book_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_book_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_book_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_book_list.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_category.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_category.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_channel_edit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_channel_edit.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_comm_ctrl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_comm_ctrl.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_comm_dlg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_comm_dlg.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_comm_pwdlg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_comm_pwdlg.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_comm_root.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_comm_root.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_common.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_config.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_dbase_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_dbase_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_desktop.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_desktop.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_do_search.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_do_search.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_dump_by_usb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_dump_by_usb.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_dvr_config.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_dvr_config.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_epg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_epg.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_epg_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_epg_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_epg_detail.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_epg_detail.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_epg_find.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_fav_edit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_fav_edit.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_fav_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_fav_list.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_fav_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_fav_set.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_favorite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_favorite.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_find.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_find.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_fp_audio_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_freq_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_game.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_game_common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_game_common.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_game_othello.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_game_othello.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_game_tetris.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_game_tetris.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_gui_defines.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_gui_defines.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_hdd_info.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_hdd_info.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_info.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_info.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_jump.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_jump.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_keyboard_ctrl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_keyboard_ctrl.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_keyboard_menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_keyboard_menu.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_keyboard_v2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_keyboard_v2.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_language.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_language.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_mainmenu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_mainmenu.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_manual_search.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_manual_search.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_menu_manager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_menu_manager.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_music_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_music_player_service.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_music_player_service.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_mute.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_mute.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_notify.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_notify.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_nprog_bar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_nprog_bar.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_num_play.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_num_play.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_nvod.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_nvod.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_nvod_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_nvod_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_nvod_video.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_nvod_video.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_nvod_volume.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_nvod_volume.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_osd_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_osd_set.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_ota.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_ota.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_ota_api_v2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_ota_api_v2.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_ota_search.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_ota_search.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_parental_lock.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_parental_lock.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_pause.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_pause.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_pic_play_mode_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_pic_play_mode_set.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_picture.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_picture.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_picture_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_play_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_play_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_pro_info.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_pro_info.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_prog_detail.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_prog_detail.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_prog_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_prog_list.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_pvr_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_pvr_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_pvr_play_bar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_pvr_play_bar.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_pvr_rec_bar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_pvr_rec_bar.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_range_search.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_range_search.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_record_manager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_record_manager.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_rename.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_rename.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_rename_v2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_scan_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_scan_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_schedule.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_signal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_signal.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_signal_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_signal_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_sleep_hotkey.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_sleep_hotkey.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_sleep_timer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_sleep_timer.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_small_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_small_list.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_small_list_pvr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_sort_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_sort_list.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_storage_format.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_storage_format.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_subt_language.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_systatus_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_systatus_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_text_encode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_time_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_time_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_time_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_time_set.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_timer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_timer.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_timeshift_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_timeshift_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_timeshift_bar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_timeshift_bar.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_tp_search.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_ts_ota_search.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_ts_ota_search.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_ts_record.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_ts_record.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_ttx_help.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_ttx_help.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_tvsys_set.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_tvsys_set.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_upgrade_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_upgrade_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_upgrade_by_rs232.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_upgrade_by_rs232.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_upgrade_by_usb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_upgrade_by_usb.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_usb_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_usb_music.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_usb_music_fullscreen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_usb_picture.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_usb_test.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_util_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_util_api.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_video.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_video_c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_video_goto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_video_goto.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_video_m.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_video_subtitle.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_video_v.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_video_v_full_screen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_volume.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_volume.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_volume_usb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_volume_usb.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_zoom.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\ui\ui_zoom.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\user_table\user_parse_table.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\user_table\user_parse_table2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger>
+				<remote_debugging target="Release">
+					<options conn_type="0" serial_baud="115200" ip_address="localhost" ip_port="3333" additional_cmds="set $pc=0x80008010" />
+				</remote_debugging>
+			</debugger>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

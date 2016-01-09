@@ -1,0 +1,107 @@
+/********************************************************************************************/
+/* Copyright (c) 2014 Montage Technology Group Limited and its affiliated companies         */
+/* Montage Proprietary and Confidential                                                     */
+/* Montage Technology (Shanghai) Co., Ltd.                                                  */
+/********************************************************************************************/
+/****************************************************************************
+
+ ****************************************************************************/
+#ifndef __UI_TS_RECORD_H__
+#define __UI_TS_RECORD_H__
+
+/* coordinate */
+#define TS_RECORD_CONT_X			((COMM_BG_W-TS_RECORD_CONT_W)/2)
+#define TS_RECORD_CONT_W        COMM_BG_W
+#define TS_RECORD_CONT_H			420
+
+#define TS_RECORD_V_GAP               15
+
+//specify tp frm
+#define TS_RECORD_SPECIFY_TP_FRM_X     0
+#define TS_RECORD_SPECIFY_TP_FRM_Y     0
+#define TS_RECORD_SPECIFY_TP_FRM_W     COMM_BG_W
+#define TS_RECORD_SPECIFY_TP_FRM_H     330//400
+
+//searching info frm
+#define TS_RECORD_SIG_INFO_FRM_X        0//70
+#define TS_RECORD_SIG_INFO_FRM_Y        (TS_RECORD_SPECIFY_TP_FRM_Y + TS_RECORD_SPECIFY_TP_FRM_H + 20)//430
+#define TS_RECORD_SIG_INFO_FRM_W        (COMM_BG_W - 2 * TS_RECORD_SIG_INFO_FRM_X)
+#define TS_RECORD_SIG_INFO_FRM_H        200//219
+
+//signal strength name
+#define TS_RECORD_SIG_STRENGTH_NAME_X       100
+#define TS_RECORD_SIG_STRENGTH_NAME_Y       0
+#define TS_RECORD_SIG_STRENGTH_NAME_W       150
+#define TS_RECORD_SIG_STRENGTH_NAME_H       30
+
+//signal strength percent
+#define TS_RECORD_SIG_STRENGTH_PERCENT_X    (TS_RECORD_SIG_STRENGTH_NAME_X + TS_RECORD_SIG_STRENGTH_NAME_W)
+#define TS_RECORD_SIG_STRENGTH_PERCENT_Y    TS_RECORD_SIG_STRENGTH_NAME_Y
+#define TS_RECORD_SIG_STRENGTH_PERCENT_W    90
+#define TS_RECORD_SIG_STRENGTH_PERCENT_H    30
+
+//signal strength pbar
+#define TS_RECORD_SIG_STRENGTH_PBAR_X       (TS_RECORD_SIG_STRENGTH_PERCENT_X + TS_RECORD_SIG_STRENGTH_PERCENT_W)
+#define TS_RECORD_SIG_STRENGTH_PBAR_Y       (TS_RECORD_SIG_STRENGTH_PERCENT_Y + (TS_RECORD_SIG_STRENGTH_NAME_H - TS_RECORD_SIG_STRENGTH_PERCENT_H)/2)
+#define TS_RECORD_SIG_STRENGTH_PBAR_W       (COMM_BG_W - 2 * (TS_RECORD_SIG_INFO_FRM_X + TS_RECORD_SIG_STRENGTH_NAME_X )- TS_RECORD_SIG_STRENGTH_NAME_W - TS_RECORD_SIG_STRENGTH_PERCENT_W)
+#define TS_RECORD_SIG_STRENGTH_PBAR_H       16
+
+//signal BER name
+#define TS_RECORD_SIG_BER_NAME_X       TS_RECORD_SIG_STRENGTH_NAME_X
+#define TS_RECORD_SIG_BER_NAME_Y       (TS_RECORD_SIG_STRENGTH_NAME_Y + TS_RECORD_SIG_STRENGTH_NAME_H + TS_RECORD_V_GAP)
+#define TS_RECORD_SIG_BER_NAME_W       TS_RECORD_SIG_STRENGTH_NAME_W
+#define TS_RECORD_SIG_BER_NAME_H       TS_RECORD_SIG_STRENGTH_NAME_H
+
+//signal BER percent
+#define TS_RECORD_SIG_BER_PERCENT_X    TS_RECORD_SIG_STRENGTH_PERCENT_X
+#define TS_RECORD_SIG_BER_PERCENT_Y    TS_RECORD_SIG_BER_NAME_Y
+#define TS_RECORD_SIG_BER_PERCENT_W    TS_RECORD_SIG_STRENGTH_PERCENT_W
+#define TS_RECORD_SIG_BER_PERCENT_H    TS_RECORD_SIG_STRENGTH_PERCENT_H
+
+//signal BER pbar
+#define TS_RECORD_SIG_BER_PBAR_X       TS_RECORD_SIG_STRENGTH_PBAR_X
+#define TS_RECORD_SIG_BER_PBAR_Y       (TS_RECORD_SIG_BER_NAME_Y + (TS_RECORD_SIG_BER_NAME_H - TS_RECORD_SIG_BER_PBAR_H)/2)
+#define TS_RECORD_SIG_BER_PBAR_W       TS_RECORD_SIG_STRENGTH_PBAR_W
+#define TS_RECORD_SIG_BER_PBAR_H       TS_RECORD_SIG_STRENGTH_PBAR_H
+
+//signal SNR name
+#define TS_RECORD_SIG_SNR_NAME_X       TS_RECORD_SIG_STRENGTH_NAME_X
+#define TS_RECORD_SIG_SNR_NAME_Y       (TS_RECORD_SIG_BER_NAME_Y + TS_RECORD_SIG_BER_NAME_H + TS_RECORD_V_GAP)
+#define TS_RECORD_SIG_SNR_NAME_W       TS_RECORD_SIG_STRENGTH_NAME_W
+#define TS_RECORD_SIG_SNR_NAME_H       TS_RECORD_SIG_STRENGTH_NAME_H
+
+//signal SNR percent
+#define TS_RECORD_SIG_SNR_PERCENT_X    TS_RECORD_SIG_STRENGTH_PERCENT_X
+#define TS_RECORD_SIG_SNR_PERCENT_Y    TS_RECORD_SIG_SNR_NAME_Y
+#define TS_RECORD_SIG_SNR_PERCENT_W    TS_RECORD_SIG_STRENGTH_PERCENT_W
+#define TS_RECORD_SIG_SNR_PERCENT_H    TS_RECORD_SIG_STRENGTH_PERCENT_H
+
+//signal SNR pbar
+#define TS_RECORD_SIG_SNR_PBAR_X       TS_RECORD_SIG_STRENGTH_PBAR_X
+#define TS_RECORD_SIG_SNR_PBAR_Y       (TS_RECORD_SIG_SNR_NAME_Y + (TS_RECORD_SIG_SNR_NAME_H - TS_RECORD_SIG_SNR_PBAR_H)/2)
+#define TS_RECORD_SIG_SNR_PBAR_W       TS_RECORD_SIG_STRENGTH_PBAR_W
+#define TS_RECORD_SIG_SNR_PBAR_H       TS_RECORD_SIG_STRENGTH_PBAR_H
+
+#define TS_RECORD_ITEM_CNT		4
+#define TS_RECORD_ITEM_X			COMM_ITEM_OX_IN_ROOT
+#define TS_RECORD_ITEM_Y			COMM_ITEM_OY_IN_ROOT
+#define TS_RECORD_ITEM_LW		COMM_ITEM_LW
+#define TS_RECORD_ITEM_RW		(COMM_ITEM_MAX_WIDTH - TS_RECORD_ITEM_LW)
+#define TS_RECORD_ITEM_H			COMM_ITEM_H
+#define TS_RECORD_ITEM_V_GAP		6//16
+
+#define RSI_TS_RECORD_PBAR_BG           RSI_PROGRESS_BAR_BG
+#define RSI_TS_RECORD_PBAR_MID          RSI_PROGRESS_BAR_MID_ORANGE
+
+#define TS_RECORD_MAX_CNT    10
+
+/* rect style */
+#define RSI_TS_RECORD_FRM		RSI_WINDOW_1
+/* font style */
+
+/* others */
+
+RET_CODE open_ts_record(u32 para1, u32 para2);
+
+#endif
+

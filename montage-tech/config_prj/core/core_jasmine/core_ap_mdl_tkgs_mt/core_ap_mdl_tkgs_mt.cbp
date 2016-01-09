@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="core_ap_mdl_tkgs_mt" />
+		<Option pch_mode="2" />
+		<Option compiler="COMPILER_SET" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin\Release\libcore_ap_mdl_tkgs_mt" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Release\" />
+				<Option type="2" />
+				<Option compiler="COMPILER_SET" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="COMPILER_OPTION1" />
+					<Add option='-MMD -MP -MF&quot;$object.d&quot; -MT&quot;$object.d&quot;' />
+					<Add option="-DASSERT_ON" />
+					<Add option="-D${SECURE}" />
+					<Add option="-DUSE_EXT_HEAP" />
+					<Add directory="$(APP_PATH)\..\msys\1.0\local\mips-windows\lib\gcc\mipsel-unknown-linux-uclibc\4.3.4\include-fixed" />
+					<Add directory="${PROJECT_LOC}\inc" />
+					<Add directory="${PROJECT_LOC}\inc\ap" />
+					<Add directory="${PROJECT_LOC}\inc\api" />
+					<Add directory="${PROJECT_LOC}\inc\drv" />
+					<Add directory="${PROJECT_LOC}\inc\hal" />
+					<Add directory="${PROJECT_LOC}\inc\mdl" />
+					<Add directory="${PROJECT_LOC}\inc\os" />
+					<Add directory="${PROJECT_LOC}\inc\util" />
+					<Add directory="${PROJECT_LOC}\inc\libra" />
+					<Add directory="${PROJECT_LOC}\inc\mboot" />
+					<Add directory="${PROJECT_LOC}\inc\drv\bus" />
+					<Add directory="${PROJECT_LOC}\inc\drv\drvbase" />
+					<Add directory="${PROJECT_LOC}\inc\hal\arch" />
+					<Add directory="${PROJECT_LOC}\inc\util\log" />
+					<Add directory="${PROJECT_LOC}\inc\mdl\eva" />
+					<Add directory="${PROJECT_LOC}\inc\mdl\filters" />
+					<Add directory="${PROJECT_LOC}\inc\mdl\mmi" />
+					<Add directory="${PROJECT_LOC}\inc\kware\demux_mp" />
+					<Add directory="${PROJECT_LOC}\src\mdl\mmi\gui\vfont\inc" />
+					<Add directory="${PROJECT_LOC}\inc\firmware" />
+					<Add directory="${PROJECT_LOC}\inc\kware" />
+					<Add directory="${PROJECT_LOC}\inc\kware\ts_seq" />
+					<Add directory="${PROJECT_LOC}\src\mdl\vfs" />
+					<Add directory="${PROJECT_LOC}\inc\kware\file_playback" />
+					<Add directory="${PROJECT_LOC}\inc\kware\network\ftp" />
+					<Add directory="${PROJECT_LOC}\inc\kware\network\tcpip" />
+					<Add directory="${PROJECT_LOC}\inc\kware\network\http" />
+					<Add directory="${PROJECT_LOC}\inc\kware\network\http_file" />
+					<Add directory="${PROJECT_LOC}\inc\kware\network\samba" />
+					<Add directory="${PROJECT_LOC}\inc\kware\RSSClient\tinyxml" />
+					<Add directory="${PROJECT_LOC}\inc\kware\network\socket" />
+					<Add directory="${PROJECT_LOC}\src\util\httpd" />
+					<Add directory="${PROJECT_LOC}\inc\util\iconv" />
+					<Add directory="${PROJECT_LOC}\src\mdl\txt_extractor" />
+					<Add directory="${PROJECT_LOC}\inc\kware\network\tcpip\netif" />
+				</Compiler>
+				<ExtraCommands>
+					<Add after="sh ../linux_link_core_ap_mdl.sh core_ap_mdl_tkgs_mt COMPILER_SET" />
+					<Mode after="always" />
+				</ExtraCommands>
+				<Environment>
+					<Variable name="PROJECT_LOC" value="${PROJECT_DIR}..\..\..\.." />
+				</Environment>
+			</Target>
+		</Build>
+		<Unit filename="..\..\..\..\src\ap\tkgs\ap_tkgs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\tkgs\ap_tkgs_intra.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\tkgs\ap_tkgs_intra.h" />
+		<Unit filename="..\..\..\..\src\ap\tkgs\ap_tkgs_parse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\tkgs\ap_tkgs_parse.h" />
+		<Unit filename="..\..\..\..\src\mdl\dvb\tkgs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

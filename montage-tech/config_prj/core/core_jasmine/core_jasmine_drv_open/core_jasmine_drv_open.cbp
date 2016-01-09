@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="core_jasmine_drv_open" />
+		<Option pch_mode="2" />
+		<Option compiler="mips24k" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin\Release\libcore_jasmine_drv_open" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Release\" />
+				<Option type="2" />
+				<Option compiler="mips24k" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-EL -march=mips32r2 -mxgot -mlong-calls -mabi=32 -mno-abicalls -Wall -Wno-pointer-sign -O2 -Wno-pointer-to-int-cast  -ffunction-sections" />
+					<Add option='-MMD -MP -MF&quot;$object.d&quot; -MT&quot;$object.d&quot;' />
+					<Add option="-DCONCERTO" />
+					<Add option="-DCONCERTO_144_B" />
+					<Add option="-DDRV_SEL_SMC" />
+					<Add directory="$(APP_PATH)\..\msys\1.0\local\mips-windows\lib\gcc\mipsel-unknown-linux-uclibc\4.3.4\include-fixed" />
+					<Add directory='&quot;${PROJECT_LOC}\inc&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\ap&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\api&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\drv&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\hal&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\mdl&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\os&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\util&quot;' />
+					<Add directory="${PROJECT_LOC}\inc" />
+					<Add directory="${PROJECT_LOC}\inc\ap" />
+					<Add directory="${PROJECT_LOC}\inc\api" />
+					<Add directory="${PROJECT_LOC}\inc\drv" />
+					<Add directory="${PROJECT_LOC}\inc\hal" />
+					<Add directory="${PROJECT_LOC}\inc\mdl" />
+					<Add directory="${PROJECT_LOC}\inc\os" />
+					<Add directory="${PROJECT_LOC}\inc\util" />
+					<Add directory="${PROJECT_LOC}\inc\libra" />
+					<Add directory="${PROJECT_LOC}\inc\mboot" />
+					<Add directory="${PROJECT_LOC}\inc\drv\bus" />
+					<Add directory="${PROJECT_LOC}\inc\drv\drvbase" />
+					<Add directory="${PROJECT_LOC}\src\os\ucos\inc" />
+					<Add directory="${PROJECT_LOC}\src\os\ucos\inc\concerto" />
+					<Add directory="${PROJECT_LOC}\src\kware\tcpip_pro\networking\inc" />
+					<Add directory="${PROJECT_LOC}\inc\hal\arch" />
+					<Add directory="${PROJECT_LOC}\test\drvtest_code\warriors_drvtest_cmd" />
+					<Add directory="${PROJECT_LOC}\inc\util\log" />
+					<Add directory="${PROJECT_LOC}\inc\mdl\eva" />
+					<Add directory="${PROJECT_LOC}\inc\mdl\filters" />
+					<Add directory="${PROJECT_LOC}\inc\mdl\mmi" />
+					<Add directory="${PROJECT_LOC\inc\kware\demux_mp" />
+					<Add directory="${PROJECT_LOC}\src\kware\demux_mp\mplayer" />
+					<Add directory="${PROJECT_LOC}\src\mdl\mmi\gui\vfont\inc" />
+					<Add directory="${PROJECT_LOC}\src\kware\tcpip_pro\lwip\src\include" />
+					<Add directory="${PROJECT_LOC}\src\kware\tcpip_pro\lwip\src\include\ipv4" />
+					<Add directory="${PROJECT_LOC}\src\kware\tcpip_pro\lwip\arch\include" />
+					<Add directory="${PROJECT_LOC}\src\kware\tcpip_pro\lwip\arch\include\arch" />
+					<Add directory="${PROJECT_LOC}\src\kware\ufs\fat" />
+					<Add directory="${PROJECT_LOC}\src\kware\ufs\ntfs-3g\include" />
+					<Add directory="${PROJECT_LOC}\src\kware\ufs\ntfs-3g\include\fuse-lite" />
+					<Add directory="${PROJECT_LOC}\src\kware\ufs\ntfs-3g\include\ntfs-3g" />
+					<Add directory="${PROJECT_LOC}\src\kware\ufs\ntfs-3g\src" />
+					<Add directory="${PROJECT_LOC}\src\firmware\core\include" />
+					<Add directory="${PROJECT_LOC}\inc\firmware" />
+					<Add directory="${PROJECT_LOC}\src\firmware\video\video_dec\concerto\common\inc" />
+					<Add directory="${PROJECT_LOC}\src\firmware\audio\audio_common\concerto" />
+					<Add directory="${PROJECT_LOC}\src\firmware\video\video_dec\concerto\avs" />
+					<Add directory="${PROJECT_LOC}\inc\kware" />
+					<Add directory="${PROJECT_LOC}\inc\kware\ts_seq" />
+					<Add directory="${PROJECT_LOC}\src\mdl\vfs" />
+					<Add directory="${PROJECT_LOC}\src\firmware\pic_16f7x" />
+					<Add directory="${PROJECT_LOC}\src\kware\ts_seq" />
+					<Add directory="${PROJECT_LOC}\src\firmware\core\concerto" />
+					<Add directory="${PROJECT_LOC\inc\kware\file_playback" />
+					<Add directory="${PROJECT_LOC}\src\drv\nim\dvbt\atbm" />
+					<Add directory="${PROJECT_LOC}\src\drv\nim\dvbt\MN88472_MXL603" />
+				</Compiler>
+				<ExtraCommands>
+					<Add after="sh ../linux_link_core_jasmine.sh core_jasmine_drv_open" />
+					<Mode after="always" />
+				</ExtraCommands>
+				<Environment>
+					<Variable name="PROJECT_LOC" value="${PROJECT_DIR}..\..\..\.." />
+				</Environment>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-EL -march=mips32r2 -mxgot -mlong-calls -mabi=32 -mno-abicalls -Wall -Wno-pointer-sign -O2 -Wno-pointer-to-int-cast  -ffunction-sections" />
+			<Add option='-fshort-wchar -MMD -MP -MF&quot;$object.d&quot; -MT&quot;$object.d&quot;' />
+			<Add option="-DCONCERTO_144_B" />
+		</Compiler>
+		<ExtraCommands>
+			<Add after="sh ../linux_link_core_jasmine.sh core_jasmine_drv_open" />
+			<Mode after="always" />
+		</ExtraCommands>
+		<Unit filename="..\..\..\..\src\ap\playback\ap_playback_priv.h" />
+		<Unit filename="..\..\..\..\src\ap\scan\ap_scan_priv.h" />
+		<Unit filename="..\..\..\..\src\ap\time\ap_time_default.h" />
+		<Unit filename="..\..\..\..\src\ap\upg\ap_upg_priv.h" />
+		<Unit filename="..\..\..\..\src\ap\usb_upg\ap_usb_upg_priv.h" />
+		<Unit filename="..\..\..\..\src\drv\bus\i2c\concerto\i2c_concerto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\bus\i2c\i2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\bus\i2c\i2cgpio\i2c_gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\bus\spi\concerto\spi_concerto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\bus\spi\spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\bus\spi\spi_priv.h" />
+		<Unit filename="..\..\..\..\src\drv\charsto\charsto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\charsto\jazz\spiflash_jazz.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\M88DC2800.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\MXL608\MaxLinearDataTypes.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\MXL608\MxL608_Features.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\MXL608\MxL608_OEM_Drv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\MXL608\MxL608_OEM_Drv.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\MXL608\MxL608_TunerApi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\MXL608\MxL608_TunerApi.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\MXL608\MxL608_TunerCfg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\MXL608\MxL608_TunerCfg.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\MXL608\MxL608_TunerSpurTable.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\MXL608\MxL608_TunerSpurTable.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\MXL608\MxL_Debug.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\inc\tmCompId.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\inc\tmFlags.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\inc\tmFrontEnd.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\inc\tmNxTypes.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\inc\tmUnitParams.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\inc\tmbslFrontEndCfgItem.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\inc\tmbslFrontEndTypes.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\inc\tmsysFrontEndTypes.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\inc\tmsysScanXpress.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\tmbslTDA18250A\tmbslTDA18250A.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\tmbslTDA18250A\tmbslTDA18250A.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\tmbslTDA18250A\tmbslTDA18250A_Advanced.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\tmbslTDA18250A\tmbslTDA18250A_Advanced.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\tmbslTDA18250A\tmbslTDA18250A_Config_ATSC.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\tmbslTDA18250A\tmbslTDA18250A_Config_Common.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\tmbslTDA18250A\tmbslTDA18250A_Config_DTMB.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\tmbslTDA18250A\tmbslTDA18250A_Config_DVBC.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\tmbslTDA18250A\tmbslTDA18250A_Config_DVBT.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\tmbslTDA18250A\tmbslTDA18250A_Config_ISDBT.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250A\tmbslTDA18250A\tmbslTDA18250A_Local.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250\tmCompId.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250\tmFlags.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250\tmFrontEnd.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250\tmNxTypes.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250\tmUnitParams.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250\tmbslFrontEndTypes.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250\tmbslTDA18250InstanceCustom.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250\tmbslTDA18250local.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250\tmddTDA18250.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250\tmddTDA18250.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250\tmddTDA18250Instance.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250\tmddTDA18250InstanceCustom.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDA18250\tmddTDA18250local.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\TDCC_G051F.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\XuGuang_XDCT6A.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_common.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_def.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_dmd_dc2800.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_dmd_dc2800_tuner.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_i2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_i2c.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_tn_MxL608.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_tn_MxL608.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_tn_R836.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_tn_TDA18250.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_tn_TDA18250.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_tn_tc2000.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_tn_tc2800.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_tn_tc2800.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\mt_fe_tn_tc3800.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\nim_m88dc2800.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\nim\dvbc\m88dc2800\nim_m88dc2800.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbs\m88rs6000\mt_fe_rs6k_common.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbs\m88rs6000\mt_fe_rs6k_def.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbs\m88rs6000\mt_fe_rs6k_dmd_ds3000_fw.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbs\m88rs6000\mt_fe_rs6k_dmd_ds3000_reg_tbl.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbs\m88rs6000\mt_fe_rs6k_i2c.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbs\m88rs6000\nim_rs6k.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\MN88472_MXL603\MN88472.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\MN88472_MXL603\MN88472_UserFunction.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\MN88472_MXL603\MN_DMD_common.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\MN88472_MXL603\MN_DMD_device.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\MN88472_MXL603\MN_DMD_driver.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\MN88472_MXL603\MN_DMD_types.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\MN88472_MXL603\MN_I2C.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\MN88472_MXL603\MN_TCB.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\MN88472_MXL603\MN_Tuner.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\MN88472_MXL603\nim_mn_mxl.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\atbm\Atbm781x.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\atbm\AtbmCommon.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\atbm\AtbmDiseqcAPI.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\atbm\MaxLinearDataTypes.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\atbm\MxL603_Features.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\atbm\MxL603_OEM_Drv.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\atbm\MxL603_TunerApi.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\atbm\MxL603_TunerCfg.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\atbm\MxL603_TunerSpurTable.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\atbm\MxL_Debug.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\atbm\nim_atbm.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\m88dd3k\fe_dd3k_def.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\m88dd3k\fe_dd3k_i2c.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\m88dd3k\mt_fe_common.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\m88dd3k\mt_fe_dmd_fw_dd3k.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\dvbt\m88dd3k\mt_fe_tn_tc2800.h" />
+		<Unit filename="..\..\..\..\src\drv\nim\nim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\power\concerto\standby_img\standby_for_fd650.img.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_concerto\drv_smc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_concerto\drv_smc.h" />
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_concerto\smc_block.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_concerto\smc_block.h" />
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_concerto\smc_concerto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_concerto\smc_concerto.h" />
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_concerto\smc_ctl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_concerto\smc_ctl.h" />
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_concerto\smc_t0.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_concerto\smc_t0.h" />
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_concerto\smc_t1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_concerto\smc_t1.h" />
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_op.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_op_priv.h" />
+		<Unit filename="..\..\..\..\src\drv\smc\smcop\smc_warriors\smc7816_warriors.h" />
+		<Unit filename="..\..\..\..\src\drv\smc\smcpro\smc_pro.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\smc\smcpro\smc_pro_priv.h" />
+		<Unit filename="..\..\..\..\src\drv\uio\concertopanel\frontpanel_concerto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\uio\irda_concerto\irda_concerto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\uio\uio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\drv\uio\uio_concerto_priv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\kware\ads\ads_adapter.h" />
+		<Unit filename="..\..\..\..\src\kware\cas\cas_adapter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\kware\cas\cas_adapter.h" />
+		<Unit filename="..\..\..\..\src\mdl\database\data_base_priv.h" />
+		<Unit filename="..\..\..\..\src\mdl\dm\data_manager_priv.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\av_render_filter\av_render_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\av_render_filter\av_render_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\char_filter\char_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\char_filter\char_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\char_filter\char_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\demux_filter\demux_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\demux_filter\demux_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\file_sink_filter\file_sink_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\file_sink_filter\file_sink_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\file_source_filter\file_source_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\file_source_filter\file_source_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\lrc_decode_filter\lrc_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\lrc_decode_filter\lrc_input_music_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\lrc_decode_filter\lrc_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\lrc_decode_filter\lrc_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_decode_filter\mp3_decode_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_decode_filter\mp3_decode_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_lrc_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_pic_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_filter\pic_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_filter\pic_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_filter\pic_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_render_filter\pic_render_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_render_filter\pic_render_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\record_filter\record_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\record_filter\record_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\record_filter\record_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_filter\subt_database.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_filter\subt_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_filter\subt_filter_msg.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_filter\subt_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_filter\subt_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_database.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_parse.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\ts_player_filter\ts_player_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\ts_player_filter\ts_player_in_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\ts_player_filter\ts_player_out_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\framework\fw_common.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gdi\gdi_private.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afangles.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afcjk.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afdummy.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\aferrors.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afglobal.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afhints.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afindic.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\aflatin.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\aflatin2.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afloader.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afmodule.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\aftypes.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afwarp.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\base\ftbase.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\bdf\bdf.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\bdf\bdfdrivr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\bdf\bdferror.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftccache.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftccback.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftcerror.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftcglyph.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftcimage.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftcmanag.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftcmru.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftcsbits.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cffcmap.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cffdrivr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cfferrs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cffgload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cffload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cffobjs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cffparse.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cfftoken.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cfftypes.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cid\ciderrs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cid\cidgload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cid\cidload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cid\cidobjs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cid\cidparse.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cid\cidriver.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cid\cidtoken.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gxvalid\gxvalid.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gxvalid\gxvcommn.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gxvalid\gxverror.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gxvalid\gxvfeat.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gxvalid\gxvmod.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gxvalid\gxvmort.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gxvalid\gxvmorx.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\infblock.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\infcodes.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\inffixed.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\inftrees.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\infutil.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\zconf.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\zlib.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\zutil.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\lzw\ftzopen.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\otvalid\otvalid.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\otvalid\otvcommn.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\otvalid\otverror.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\otvalid\otvgpos.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\otvalid\otvmod.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pcf\pcf.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pcf\pcfdrivr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pcf\pcferror.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pcf\pcfread.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pcf\pcfutil.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrcmap.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrdrivr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrerror.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrgload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrobjs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrsbit.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrtypes.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psaux\afmparse.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psaux\psauxerr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psaux\psauxmod.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psaux\psconv.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psaux\psobjs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psaux\t1cmap.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psaux\t1decode.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pshinter\pshalgo.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pshinter\pshglob.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pshinter\pshmod.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pshinter\pshnterr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pshinter\pshrec.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psnames\psmodule.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psnames\psnamerr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psnames\pstables.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\raster\ftmisc.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\raster\ftraster.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\raster\ftrend1.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\raster\rasterrs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\sfdriver.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\sferrors.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\sfobjs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\ttbdf.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\ttcmap.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\ttkern.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\ttload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\ttmtx.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\ttpost.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\ttsbit.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\smooth\ftgrays.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\smooth\ftsmerrs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\smooth\ftsmooth.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\truetype\ttdriver.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\truetype\tterrors.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\truetype\ttgload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\truetype\ttgxvar.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\truetype\ttinterp.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\truetype\ttobjs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\truetype\ttpload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1afm.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1driver.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1errors.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1gload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1load.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1objs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1parse.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1tokens.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type42\t42drivr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type42\t42error.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type42\t42objs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type42\t42parse.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type42\t42types.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\winfonts\fnterrs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\winfonts\winfnt.h" />
+		<Unit filename="..\..\..\..\src\mdl\subtitle_vsb\subt_priv_vsb.h" />
+		<Unit filename="..\..\..\..\src\mdl\surface\surface_priv.h" />
+		<Unit filename="..\..\..\..\src\mdl\vbi_vsb\ttx_bcd_vsb.h" />
+		<Unit filename="..\..\..\..\src\mdl\vbi_vsb\ttx_db_vsb.h" />
+		<Unit filename="..\..\..\..\src\mdl\vbi_vsb\ttx_dec_vsb.h" />
+		<Unit filename="..\..\..\..\src\mdl\vbi_vsb\ttx_format_vsb.h" />
+		<Unit filename="..\..\..\..\src\mdl\vbi_vsb\ttx_hamm_vsb.h" />
+		<Unit filename="..\..\..\..\src\mdl\vbi_vsb\ttx_lang_vsb.h" />
+		<Unit filename="..\..\..\..\src\mdl\vbi_vsb\ttx_render_vsb.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

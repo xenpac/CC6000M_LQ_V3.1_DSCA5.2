@@ -1,0 +1,359 @@
+/********************************************************************************************/
+/* Copyright (c) 2014 Montage Technology Group Limited and its affiliated companies         */
+/* Montage Proprietary and Confidential                                                     */
+/* Montage Technology (Shanghai) Co., Ltd.                                                  */
+/********************************************************************************************/
+/****************************************************************************
+
+ ****************************************************************************/
+#ifndef __UI_GUI_DEFINES_H__
+#define __UI_GUI_DEFINES_H__
+
+#define C_TRANS           0x00000000
+#define C_KEY             0xFF00FEFF
+
+#define C_TRANS_8BIT          0xFE
+#define C_KEY_8BIT             0xFF
+
+
+#define C_BLACK           0xFF000000
+#define C_WHITE           0xFFFFFFFF
+#define C_GRAY            0xFF808080
+#ifdef WIN32
+#define C_BLUE            0xFF1784E1
+#else
+#define C_BLUE            0xFF1784E1
+#endif
+#define C_SKY_BLUE   0xFF3EB8CF
+#define C_LIGHT_RED   0xFFF8BBDD
+
+#define C_RED             0xFFFF0000
+#define C_GREEN           0xFFFF83E0
+#define C_DEEP_GREEN  0xFF258E27
+#define C_FONT_GREEN   0xFF00CD00
+#define C_FONT_BLUE       0xFFFF9156
+#define C_GOLD            0xFFFFff00//0xd980//0x7f80
+#define C_PINK            0xFFFFf1fe
+#define C_YELLOW          0xFFFFC125
+
+
+#define C_BLACK_BG     0xB2000000
+
+#define C_LIGHT_GRAY      0xFFFFadad//0xc210//0x9084//0x94A5
+
+#define C_DEEP_PINK       0xFFFFc070//0xc471
+
+#define C_DEEP_PURPLE     0xFFFF5416
+
+#define C_DEEP_BLUE       0xFFFF9440
+#define C_DEEP_BLUE1       0xFF000158
+#define C_LIGHT_BLUE      0xFFFFb4e3
+
+#define C_SPECIAL_BLUE    0xFFFFa217
+
+#define C_EPG_BLUE_SH       0x011128FF
+#define C_EPG_BLUE_HL       0xD3992EFF
+
+#define C_FINGER_BACKGROUND       0xFF0000FB
+#define C_FINGER_FONT       0xFF0000FC
+
+#define C_ROLL_OSD_BACKGROUND       0xFF0000F9
+#define C_ROLL_OSD_FONT       0xFF0000FC
+
+#define C_OSD_BACKGROUND       0xFF0000FD
+#define C_OSD_FONT       0xFF0000FC
+
+#define C_PROGLIST_BRIEF  0xFFFFdded
+#define C_PROGBAR_BOTTOM  0xFFFFe1c3
+
+#define C_DARKER_GRAY     0xff222222//0x8842
+
+#ifdef ENABLE_NETWORK
+#define C_DARK_GRAY       0xff505050//0x98C4
+#define C_TRANS_GRAY      0x00bcb9c0//0xaabcb9c0//0xDEF8  // for font
+
+#define C_GRAY_BACK 0xff0b2d99//0x8493 //11,45,153
+#define C_GRAY_GRAY 0xff3b3944 //0x9ce8 //59,57,68 3b3944
+#define C_GRAY_YELLOW 0xfff9c22a//0x7b05 //249, 194, 42 f9c22a
+
+#define C_NET_LINE 0xff0b2838
+#define C_FONT_GRAY   0xFFb9b9b9
+#define C_DROP_LIST_BG 0xff1b4287//0x8d10 //1b4287
+#endif
+
+enum rect_style_id
+{
+  RSI_IGNORE = 0,       //because default color is 0 in lib, this color style means will not be drawn
+  RSI_TRANSPARENT,
+  RSI_WINDOW_1,
+  RSI_WINDOW_2,
+  RSI_WINDOW_3,  
+  RSI_ITEM_1_HL,
+  RSI_ITEM_1_SH,
+  RSI_SCROLL_BAR_BG,
+  RSI_SCROLL_BAR_MID,
+  RSI_VOLUME_BAR,
+  RSI_LIST_FIELD_LEFT_HL,
+  RSI_LIST_FIELD_LEFT_SH,
+  RSI_LIST_FIELD_MID_HL,
+  RSI_LIST_FIELD_MID_SH,
+  RSI_LIST_FIELD_RIGHT_HL,
+  RSI_LIST_FIELD_RIGHT_SH,
+  RSI_TV,
+  RSI_LIGHT_BLUE_BACKGROUND,
+  RSI_PROGRESS_BAR_BG,
+  RSI_PROGRESS_BAR_MID_BLUE,
+  RSI_PROGRESS_BAR_MID_GREEN,
+  RSI_PROGRESS_BAR_MID_GRAY,
+  RSI_PROGRESS_BAR_MID_ORANGE,
+  RSI_PROGRESS_BAR_MID_RED,
+  RSI_LINE_03_MID,
+  RSI_INFOR_WIN,
+  RSI_VOLUME_WIN,
+  RSI_WHITE_FRM,
+  RSI_KEYBOARD_BAR,
+  RSI_KEYBOARD_ITEM_HL,
+  RSI_KEYBOARD_ITEM_SH,
+  RSI_PLAY_PBAR_BACK,
+  RSI_PLAY_PBAR_FRONT,
+  RSI_WINDOW_GAME,
+  RSI_CHESS_HL,
+  RSI_ITEM_3_SH,
+  RSI_ITEM_2_SH,
+
+  RSI_LEFT_RIGHT_HL,
+
+  RSI_T9EDIT_RIGHT_HL,
+  RSI_T9EDIT_RIGHT_SH,
+  RSI_T9EDIT_RIGHT_GRAY,
+
+  RSI_COMMAN_BG,
+  RSI_COMMAN_MID_BG,
+  RSI_MMENUWIN01_BG,
+  RSI_MMENUWIN01_BANNER_BG,
+  RSI_MMENUWIN01_TIME_BG,
+
+  RSI_LINE_EPG_SH,
+  RSI_LINE_EPG_HL,
+   
+  RSI_PBACK,
+
+  RSI_GAME_SELECT_HL,
+
+  RSI_GAME_ITEM_HL,
+
+  RSI_ITEM_10_SH,
+  
+  RSI_ITEM_6_HL,
+
+  RSI_ITEM_7_HL,
+  
+  RSI_KEYBOARD_BAR_V2,
+  RSI_KEYBOARD_LABEL_SH,
+  RSI_KEYBOARD_LABEL_HL,
+  RSI_KEYBOARD_BUTTON_SH,
+  RSI_KEYBOARD_BUTTON_HL,
+   
+  RSI_TV_SMALL,
+
+  RSI_TIMESHIFT_PLAY_TIME_PBACK,
+
+  RSI_ITEM_GREEN_HL,
+    
+  RSI_MAINMENU_BG,
+  
+  RSI_COMMON_RECT1,   //63
+  
+  RSI_MENU_BTN_SH,
+  
+  RSI_MENU_BTN_HL,
+  
+  RSI_TITLE_BG,
+  
+  RSI_HELP_BG,
+  
+  RSI_MENU_ICON_SH,
+
+  RSI_MENU_ICON_HL,
+
+  RSI_DATE_SH,
+    
+  RSI_DATE_HL,
+
+  RSI_TRANSLUCENT,  //channel list rect, transperent bg
+  RSI_SMALL_LIST_TITLE,
+  RSI_MENU_ITEM_BG,
+  RSI_MAINMENU_TITLE_BG,
+  RSI_BLACK,
+  RSI_BLUE,
+  RSI_GRAY,
+  RSI_OSD,
+  RSI_ROLL_OSD,
+  RSI_FINGER_BACKGROUND,
+  RSI_SMALL_LIST_TITLE_TRANS,
+  RSI_WHITE,
+  RSI_YELLOW,
+  RSI_RED,
+  RSI_GREEN,
+  RSI_FINGER_BACKGROUND_2,
+ 
+ #ifdef ENABLE_NETWORK 
+  //network
+  RSI_POPUP_BG,
+  RSI_ITEM_6,
+  RSI_ITEM_2_HL,
+  RSI_ITEM_13_HL,
+  RSI_MAIN_BG,
+  RSI_BOX_1,
+  RSI_BOX_2,
+  RSI_MV_POSTER_FRM_SH,
+  RSI_MV_POSTER_FRM_HL,
+  RSI_SUBMENU_DETAIL_BG,
+  RSI_COMMON_TITLE,
+  RSI_ITEM_11_SH,
+  RSI_ITEM_12_SH,
+  RSI_BLACK_FRM,
+  RSI_MAP_SCROLL_BAR_BG,
+  RSI_MAP_SCROLL_BAR_MID,
+  RSI_MAIN_BG1,
+  RSI_SMALL_LIST_ARROW,
+  RSI_PAGE_ARROW,
+  RSI_SMALL_LIST_ARROW_SELECT,
+  RSI_ITEM_12_SH_TRANS,
+  RSI_ITEM_12_HL_TRANS,
+  RSI_GRAY_FRM,
+  RSI_OTT_FRM_1_SH,
+  RSI_OTT_FRM_1_HL,
+  RSI_ITEM_8_SH,
+  RSI_ITEM_11_HL,
+  RSI_OTT_PROGRESS_BAR_BG,
+  RSI_OTT_PROGRESS_BAR_MID,
+  RSI_PLAY_BUTTON_SH,
+  RSI_PLAY_BUTTON_HL,
+  RSI_OTT_FRM_1_RED_HL,
+  RSI_NM_CLASSIC_FRM_SH,
+  RSI_NM_CLASSIC_FRM_HL,
+  RSI_OTT_KEYBOARD_KEY_SH,
+  RSI_OTT_KEYBOARD_KEY_HL,
+  RSI_OTT_IM_SEARCH,
+  RSI_ITEM_8_BG,
+  RSI_ITEM_4_SH,
+  RSI_ITEM_4_HL,
+ #endif
+  RSI_OSD_BACKGROUND,
+  RSI_SKY_BLUE,
+  RSI_LIGHT_RED,  
+  RSI_DEEP_GREEN,
+  RSTYLE_CNT,
+  MAX_RSTYLE_CNT
+};
+
+enum font_style_id
+{
+  FSI_BLACK = 0,        //black string
+  FSI_BLACK_18,         //black string
+  FSI_BLACK_24,         //black string
+  FSI_BLACK_32,         //black string
+  FSI_BLACK_48,         //black string
+  FSI_WHITE,
+  FSI_WHITE_18,
+  FSI_WHITE_24,
+  FSI_WHITE_28,
+  FSI_WHITE_32,
+  FSI_WHITE_48,
+  FSI_RED,
+  FSI_RED_18,
+  FSI_RED_24,
+  FSI_RED_32,
+  FSI_RED_48,
+  FSI_GREEN,
+  FSI_BLUE,             //blue string
+  FSI_DEEP_BLUE, 
+  FSI_GRAY,
+  FSI_YELLOW,
+  FSI_YELLOW_18,
+  FSI_YELLOW_24,
+  FSI_YELLOW_32,
+  FSI_YELLOW_48,
+  FSI_PROGLIST_BRIEF,
+  FSI_PROGBAR_BOTTOM,
+
+  FSI_NUMBER,
+  FSI_FONT_BLUE,
+  FSI_WHITE_INFO,
+  FSI_WHITE_TITLE,
+  FSI_DEEP_PURPLE,
+  FSI_LIGHT_GRAY,
+  
+  FSI_OSD1,
+  FSI_OSD2,
+  FSI_OSD3,  
+  FSI_OSD4,
+  FSI_OSD5,
+  FSI_OSD6,  
+  FSI_OSD7,  
+  FSI_OSD8,
+  FSI_OSD9,  
+  FSI_OSD10,  
+  FSI_OSD11,
+  FSI_OSD12,  
+  FSI_OSD13,
+  FSI_ROLL_OSD1,
+  FSI_ROLL_OSD2,
+  FSI_ROLL_OSD3,  
+  FSI_ROLL_OSD4,
+  FSI_ROLL_OSD5,
+  FSI_ROLL_OSD6,  
+  FSI_ROLL_OSD7,  
+  FSI_ROLL_OSD8,
+  FSI_ROLL_OSD9,  
+  FSI_ROLL_OSD10,  
+  FSI_ROLL_OSD11,
+  FSI_ROLL_OSD12,  
+  FSI_ROLL_OSD13,
+  
+  FSI_FINGER1,
+  FSI_FINGER2,
+  FSI_FINGER3,  
+  FSI_FINGER4,
+  FSI_FINGER5,
+  FSI_FINGER6,  
+  FSI_FINGER7, 
+  FSI_FINGER8,
+  FSI_FINGER9,  
+  FSI_FINGER10, 
+  FSI_FINGER11,
+  FSI_FINGER12,  
+  FSI_FINGER13,
+  FSI_FINGER_AISAT,
+  FSI_ROLL_OSD,
+#ifdef ENABLE_NETWORK  
+  FSI_LARE_WHITE,
+  FSI_LARE_WHITE_NET,
+  FSI_FONT_GRAY,
+  FSI_WHITE_16,
+  FSI_WHITE_20,
+  FSI_WHITE_22,
+  FSI_WHITE_30,
+  FSI_WHITE_36,
+  FSI_YELLOW_26,
+  FSI_BLACK_16,
+  FSI_BLACK_20,
+  FSI_VERMILION,
+  FSI_HUGE,
+  FSI_BLUE_NEWS,
+  FSI_WHITE_S,
+#endif
+  
+  FSTYLE_CNT,
+  MAX_FSTYLE_CNT
+};
+
+enum font_lib_id
+{
+  FONT_ID_1 = 1,
+};
+
+extern rsc_config_t g_rsc_config;
+
+#endif

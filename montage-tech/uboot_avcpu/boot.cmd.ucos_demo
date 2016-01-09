@@ -1,0 +1,39 @@
+#AVCPU配置参数
+#AVCPU CONFIG (64M|64M_SD|MINI_AV|NORMAL): NORMAL
+#Generate time: Jun 16 2015 15:18:37
+
+setenv avenv_AVCPU_CONFIG NORMAL
+setenv avenv_VDEC_7M_FREEZE_STOP_FLAG 0x1
+setenv avenv_VIDEO_FW_CFG_SIZE 0x2660000
+setenv avenv_VIDEO_FW_CFG_ADDR 0xa56a0000
+setenv avenv_VID_DI_CFG_SIZE 0x2d6000
+setenv avenv_VID_DI_CFG_ADDR 0xa53ca000
+setenv avenv_AUDIO_FW_CFG_SIZE 0x180000
+setenv avenv_AUDIO_FW_CFG_ADDR 0x8523a000
+setenv avenv_VID_SD_WR_BACK_SIZE 0x4bf000
+setenv avenv_VID_SD_WR_BACK_FIELD_NO 0x6
+setenv avenv_VID_SD_WR_BACK_ADDR 0xa4d7ac00
+setenv avenv_FREEZE_MEM_ADDR 0xa4300000
+setenv avenv_FREEZE_MEM_size 0x700000
+setenv avenv_SD_ENABLE 1
+
+#加载内核
+loadimg 2 lzma 0x88 0x1E0000 0x81500000 0x80008000
+
+#加载avcpu固件
+echo '######### AVCPU Flash Position ############'
+echo 'avcpu.bin 0xb0000 ~ 0x110000' 
+echo '######################################'
+loadimg 1 lzma 0xb0000 0x81500000 0x87e10000
+echo \(avcpu size is $imgsize\)
+#启动avcpu
+av_launch 0x87e10000 
+
+#加载Logo资源
+#loadimg 1 none 0xf0000 0x81500000   
+#echo \(logo size is $imgsize\)   
+#显示logo                                                                  
+#show_logo 0x81500000 $imgsize     
+                                                       
+#启动内核
+go 0x80008000                                                                                                                                                              

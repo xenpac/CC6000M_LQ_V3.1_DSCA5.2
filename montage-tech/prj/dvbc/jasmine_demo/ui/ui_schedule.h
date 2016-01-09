@@ -1,0 +1,123 @@
+/********************************************************************************************/
+/* Copyright (c) 2014 Montage Technology Group Limited and its affiliated companies         */
+/* Montage Proprietary and Confidential                                                     */
+/* Montage Technology (Shanghai) Co., Ltd.                                                  */
+/********************************************************************************************/
+/****************************************************************************
+
+ ****************************************************************************/
+#ifndef _UI_SCHEDULE_H_
+#define _UI_SCHEDULE_H_
+
+#include "ui_common.h"
+
+/*coordinates*/
+#define SCHEDULE_MENU_X  ((SCREEN_WIDTH - SCHEDULE_MENU_W)/2)
+#define SCHEDULE_MENU_Y  ((SCREEN_HEIGHT - SCHEDULE_MENU_H)/2)
+#define SCHEDULE_MENU_W  634//SCREEN_WIDTH
+#define SCHEDULE_MENU_H  420//388//SCREEN_HEIGHT
+
+#define SCHEDULE_ICON_X  0
+#define SCHEDULE_ICON_Y  0
+#define SCHEDULE_ICON_W  80
+#define SCHEDULE_ICON_H  80
+
+#define SCHEDULE_TOP_LINE_X  60
+#define SCHEDULE_TOP_LINE_Y  70
+#define SCHEDULE_TOP_LINE_W  490//540
+#define SCHEDULE_TOP_LINE_H  18
+
+#define SCHEDULE_BOTTOM_LINE_X  SCHEDULE_TOP_LINE_X
+#define SCHEDULE_BOTTOM_LINE_Y  270
+#define SCHEDULE_BOTTOM_LINE_W  SCHEDULE_TOP_LINE_W
+#define SCHEDULE_BOTTOM_LINE_H  18
+
+#define SCHEDULE_DETAIL_X  110
+#define SCHEDULE_DETAIL_Y  90
+#define SCHEDULE_DETAIL_W  400//440
+#define SCHEDULE_DETAIL_H  180
+
+#define SCHEDULE_DETAIL_PGX  0
+#define SCHEDULE_DETAIL_PGY  0
+#define SCHEDULE_DETAIL_PGW  240
+#define SCHEDULE_DETAIL_PGH  30
+
+#define SCHEDULE_DETAIL_EVTNX  0
+#define SCHEDULE_DETAIL_EVTNY  (SCHEDULE_DETAIL_PGY + SCHEDULE_DETAIL_PGH + SCHEDULE_DETAIL_VGAP)
+#define SCHEDULE_DETAIL_EVTNW  SCHEDULE_DETAIL_W
+#define SCHEDULE_DETAIL_EVTNH  SCHEDULE_DETAIL_PGH
+
+#define SCHEDULE_DETAIL_EVTTX  0
+#define SCHEDULE_DETAIL_EVTTY  (SCHEDULE_DETAIL_EVTNY + SCHEDULE_DETAIL_EVTNH + SCHEDULE_DETAIL_VGAP)
+#define SCHEDULE_DETAIL_EVTTW  SCHEDULE_DETAIL_W
+#define SCHEDULE_DETAIL_EVTTH  SCHEDULE_DETAIL_PGH
+
+#define SCHEDULE_DETAIL_SHORTX  0
+#define SCHEDULE_DETAIL_SHORTY  (SCHEDULE_DETAIL_EVTTY + SCHEDULE_DETAIL_EVTTH + SCHEDULE_DETAIL_VGAP)
+#define SCHEDULE_DETAIL_SHORTW  SCHEDULE_DETAIL_W
+#define SCHEDULE_DETAIL_SHORTH  (2*SCHEDULE_DETAIL_PGH + 10)
+
+#define SCHEDULE_DETAIL_VGAP 4
+
+#define SCHEDULE_PREV_X  560//610
+#define SCHEDULE_PREV_Y  72//80
+#define SCHEDULE_PREV_W  320//270
+#define SCHEDULE_PREV_H  212//204
+
+#define SCHEDULE_TIME_X  700
+#define SCHEDULE_TIME_Y  20
+#define SCHEDULE_TIME_W  170
+#define SCHEDULE_TIME_H  36
+
+#define SCHEDULE_LIST_PGX  70
+#define SCHEDULE_LIST_PGY  290
+#define SCHEDULE_LIST_PGW  826
+#define SCHEDULE_LIST_PGH  215
+
+#define SCHEDULE_LIST_DATEX  (SCHEDULE_LIST_PGX + SCHEDULE_LIST_PGW - SCHEDULE_HGAP)
+#define SCHEDULE_LIST_DATEY  SCHEDULE_LIST_PGY
+#define SCHEDULE_LIST_DATEW  148
+#define SCHEDULE_LIST_DATEH  SCHEDULE_LIST_PGH
+
+#define SCHEDULE_LIST_EVTX  (SCHEDULE_LIST_DATEX + SCHEDULE_LIST_DATEW - SCHEDULE_HGAP)
+#define SCHEDULE_LIST_EVTY  SCHEDULE_LIST_PGY
+#define SCHEDULE_LIST_EVTW  400
+#define SCHEDULE_LIST_EVTH  SCHEDULE_LIST_PGH
+
+//help
+#define SCHEDULE_HELP_X  60 
+#define SCHEDULE_HELP_Y  530
+#define SCHEDULE_HELP_W  800
+#define SCHEDULE_HELP_H  28
+
+#define SCHEDULE_VGAP 6//4
+#define SCHEDULE_HGAP 4
+
+/*rstyle*/
+#define RSI_SCHEDULE_MENU    RSI_IGNORE
+#define RSI_SCHEDULE_PREV  RSI_TV
+#define RSI_SCHEDULE_DETAIL  RSI_PBACK
+#define RSI_SCHEDULE_LIST_CONT RSI_PBACK
+#define RSI_SCHEDULE_LIST  RSI_PBACK
+
+/*others*/
+#define SCHEDULE_LIST_PAGE 5
+#define SCHEDULE_LIST_FIELD 4
+
+#define SCHEDULE_LCONT_MBOX_TOL  4
+#define SCHEDULE_LCONT_MBOX_COL  4
+#define SCHEDULE_LCONT_MBOX_ROW  1
+#define SCHEDULE_LCONT_MBOX_HGAP  0
+#define SCHEDULE_LCONT_MBOX_VGAP  0
+
+#define SCHEDULE_INFO_MBOX_TOL  2
+#define SCHEDULE_INFO_MBOX_COL  2
+#define SCHEDULE_INFO_MBOX_ROW  1
+#define SCHEDULE_INFO_MBOX_HGAP  4
+
+/*fstyle*/
+#define FSI_SCHEDULE_INFO_MBOX FSI_WHITE
+
+RET_CODE open_schedule(u32 para1, u32 para2);
+
+#endif

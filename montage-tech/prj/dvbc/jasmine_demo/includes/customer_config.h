@@ -1,0 +1,422 @@
+/********************************************************************************************/
+/* Copyright (c) 2014 Montage Technology Group Limited and its affiliated companies         */
+/* Montage Proprietary and Confidential                                                     */
+/* Montage Technology (Shanghai) Co., Ltd.                                                  */
+/********************************************************************************************/
+/**********************************************************************/
+/**********************************************************************/
+#ifndef __CUSTOMER_CONFIG_H_
+#define __CUSTOMER_CONFIG_H_
+
+
+#define _ON    1
+#define _OFF   0
+
+// internal macro for compile
+#define ENABLE_MUSIC_PICTURE            _ON
+#ifndef ENABLE_USB_CONFIG
+#undef ENABLE_MUSIC_PIC_CONFIG
+#undef ENABLE_FILE_PLAY
+#undef ENABLE_PVR_REC_CONFIG
+#undef ENABLE_TIMESHIFT_CONFIG
+#endif
+#if (defined TEMP_SUPPORT_DS_AD) || defined (ENABLE_ADS)
+#define ENABLE_TTX_SUBTITLE             _OFF
+#else
+#ifdef WIN32
+#define ENABLE_TTX_SUBTITLE             _OFF
+#else
+#ifdef APP_TTX_SUB
+#define ENABLE_TTX_SUBTITLE             _ON
+#else
+#define ENABLE_TTX_SUBTITLE             _OFF
+#endif
+#endif
+#endif
+#define ENABLE_INFO_BAR_V2              _ON
+
+#define ENABLE_USB_DUMP_BREAK_LOG       _OFF
+#define ENABLE_TRICK_PLAY               _ON
+
+#ifdef JHC_CLOSE_WD
+#define ENABLE_WATCH_DOG                _OFF
+#else
+#define ENABLE_WATCH_DOG                _ON
+#endif
+
+#ifdef MIN_AV_64M
+#define FILE_LIST_MAX_SUPPORT_CNT (256)
+#else
+#define FILE_LIST_MAX_SUPPORT_CNT (1000)
+#endif
+#define CUSTOMER_BLOCK_ID          0xAB
+
+typedef enum
+{
+  CUSTOMER_DEFAULT,
+  CUSTOMER_YINHE,
+  CUSTOMER_KINGVON,
+  CUSTOMER_JIZHONG,
+  CUSTOMER_NEWSTART,
+  CUSTOMER_AISAT,
+  CUSTOMER_ORRISDIGITAL,
+  CUSTOMER_MSTK,
+  CUSTOMER_CHANGHONG,
+  CUSTOMER_FANTONG,
+  CUSTOMER_JIULIAN,
+  CUSTOMER_BOYUAN,
+  CUSTOMER_KONKA,
+  CUSTOMER_HUAXIDA,
+  CUSTOMER_PLAAS,
+  CUSTOMER_NEWLAND,
+  CUSTOMER_NEXTBIT,
+  CUSTOMER_ZHONGDA,
+  CUSTOMER_JIESAI,
+  CUSTOMER_JIESAI_MINI,
+  CUSTOMER_TONGJIU,
+  CUSTOMER_DFGS,
+  CUSTOMER_GUIYANG,
+  CUSTOMER_AISAT_HOTEL,
+  CUSTOMER_AISAT_DIVI,
+  CUSTOMER_HUANGSHI,
+  CUSTOMER_ZHUMUDIAN_BY,
+  CUSTOMER_AISAT_DEMO,
+  CUSTOMER_JIZHONGMEX,
+  CUSTOMER_NEXTBITNETWORK,
+  CUSTOMER_TAIHUI_DIVI,
+  CUSTOMER_AISAT_CHINA,
+  CUSTOMER_JIZHONG_DTMB,
+  CUSTOMER_JINGHUICHENG_DIVI,
+  CUSTOMER_KONKA_SV,
+}CUSTOMER_ID_ENUM;
+
+typedef enum
+{
+  COUNTRY_INDIA,
+  COUNTRY_CHINA,
+}COUNTRY;
+
+typedef struct customer_cfg
+{
+  u8 customer_id;
+  u8 cas_id;
+  u8 country;
+  BOOL b_WaterMark;
+  u32  x_WaterMark;
+  u32  y_WaterMark;
+  u8 language_num;
+  void (*cus_uio_init)(void);
+  void (*cus_config_dac)(void *p_dev);
+  void (*cus_audio_max_volume)(void *p_dev);
+  void (*cus_reg_set)(void);
+  void (*cus_bouquet_set)(void *p_data);
+  void (*cus_ir_led_set)(void);
+  void (*cus_power_led_set)(void);
+  void (*cus_config_ota_main_tp)(void);
+  void (*cus_config_mainmenu)(void);
+  void (*cus_config_other_menu)(void);  
+}customer_cfg_t;
+
+extern customer_cfg_t g_customer;
+#define CAS_ID (g_customer.cas_id)
+#define CUSTOMER_ID (g_customer.customer_id)
+#define CUSTOMER_COUNTRY (g_customer.country)
+#define CUSTOMER_MENU (g_customer.cus_config_other_menu)
+
+typedef enum
+{
+  UIO_LED_TYPE_4D = 0,
+  UIO_LED_TYPE_3D,
+} CUSTOMER_UIO_LED_TYPE;
+
+
+//config customer cas
+typedef enum
+{
+  /*
+    desai config id
+  */
+  CONFIG_CAS_ID_DS = 1,
+  /*
+    only_1 config id
+  */
+  CONFIG_CAS_ID_ONLY_1,
+    /*
+    abv config id
+  */
+  CONFIG_CAS_ID_ABV,
+  /*
+    yxsb config id
+  */
+  CONFIG_CAS_ID_TF,
+  /*
+    cryptoguard config id
+  */
+  CONFIG_CAS_ID_CRYPG,
+    /*
+    quanzhi config id
+  */
+  CONFIG_CAS_ID_GS,
+  /*
+    sanzhouxunchi config id
+  */
+  CONFIG_CAS_ID_ADT_MG,
+  /*
+    topreal config id
+  */
+  CONFIG_CAS_ID_TR,
+  /*
+    sumavision config id
+  */
+  CONFIG_CAS_ID_SV,
+  /*
+    kingvon40 config id
+  */
+  CONFIG_CAS_ID_KV40,
+  /*
+  by config id
+  */
+  CONFIG_CAS_ID_BY,
+    /*
+    diviguard 2.1 config id
+  */
+  CONFIG_CAS_ID_DIVI,
+  /*
+    Enigma CA config id
+  */
+  CONFIG_CAS_ID_ENIGMA,
+  /*
+    uti config id
+  */
+  CONFIG_CAS_ID_UNITEND,
+  /*
+  xsm config id
+  */
+  CONFIG_CAS_ID_XSM,
+  /*
+  dmt config id
+  */
+  CONFIG_CAS_ID_DMT,
+  CONFIG_CAS_ID_CONAXK,
+  /*
+    cas_sc config id
+  */
+  CONFIG_CAS_ID_SC,
+   /*
+    cas_unknow config id
+  */
+  CONFIG_CAS_UNKNOWN,
+  /*
+    config id max num
+  */
+  CONFIG_CAS_ID_MAX_NUM,
+}cas_config_id;
+
+
+
+#define CUSTOMER_STDID_SIZE 6
+
+/*!
+   [enum] for tool config the module enable or not
+  */
+typedef enum  _EXT_CUS_MODULE_CFG
+{
+     EXTERNAL_MUSIC_PICTURE,
+     EXTERNAL_TTX_SUBTITLE,
+     EXTERNAL_SMALL_LIST_V2,
+     EXTERNAL_INFO_BAR_V2,
+
+     EXTERNAL_INSTALLTION_LIST_V2,
+     EXTERNAL_GLOBAL_VOLUME ,
+     EXTERNAL_USB_DUMP_BREAK_LOG,
+     EXTERNAL_TRICK_PLAY ,
+
+     EXTERNAL_UCASKEY_EDIT ,
+     EXTERNAL_WATCH_DOG,
+     EXTERNAL_OTA,
+     EXTERNAL_TKGS_UPDATE,
+
+     EXTERNAL_CUSTOMER_YINHE,
+     EXTERNAL_CUSTOMER_AISAT,
+     EXTERNAL_CHINESE_OTA,
+}EXT_CUS_MODULE_CFG;
+
+/*!
+   [struct]  for tool config system function ,include module
+  */
+typedef struct _EXT_CUS_SYS_CFG
+{
+   BOOL  customer_module_cfg;
+
+   //for add sys config below.
+}EXT_CUS_SYS_CFG;
+
+
+typedef enum
+{
+  /*!
+    CVBS (RGB) format for video out.
+  */
+  VDAC_CVBS_RGB = 0,
+  /*!
+  Signal CVBS video out, need enable dac 3 on concerto platform
+  */
+  VDAC_SIGN_CVBS,
+    /*!
+  Signal CVBS low power video out, use dac 3 for cvbs video out, need HW support
+  */
+  VDAC_SIGN_CVBS_LOW_POWER,
+  /*!
+  CVBS+CVBS format for video out.
+  */
+  VDAC_DUAL_CVBS,
+    /*!
+    SVDIEO format for  video out.
+    */
+  VDAC_SIGN_SVIDEO,
+    /*!
+   CVBS + S_VIDEO format for  video out.
+    */
+  VDAC_CVBS_SVIDEO,
+    /*!
+    YUV (SD) + CVBS format for  video out.
+    */
+  VDAC_CVBS_YPBPR_SD,
+    /*!
+    YUV (HD) + CVBS format for  video out.
+    */
+  VDAC_CVBS_YPBPR_HD,
+    /*!
+    reserved
+    */
+  VDAC_RESERVED1,
+      /*!
+    reserved
+    */
+  VDAC_RESERVED2,
+}vdac_info_t;
+
+
+typedef enum
+{
+  SPDIF_ON = 0,
+  SPDIF_OFF,
+}spdif_info_t;
+
+typedef enum
+{
+  LNB_LOAD_ON = 0,
+  LNB_LOAD_OFF,
+}lnb_load_t;
+
+typedef enum
+{
+  FP_GPIO = 0,
+  FP_MCU
+}fp_type_t;
+
+#define MAX_LED_MAP_NUM 128
+#define MAX_LANG_NUM 13
+
+typedef struct
+{
+  BOOL scart_enable;
+  u8 pin_tvav;
+  u8 pin_tvmode;
+  u8 pin_tvratio;
+  BOOL sog_enable;
+}scart_info_t;
+
+typedef enum
+{
+     DISP_TIME,
+     DISP_OFF,
+     DISP_NONE
+}fp_disp_t;
+
+typedef enum
+{
+  //ratio 480p
+  RATIO_480I_576I,
+  //ratio 576p
+  RATIO_480P_576P,
+  //ratio 720p
+  RATIO_720_P,
+  //ratio 1080i
+  RATIO_1080_i,
+  //ratio 1080p
+  RATIO_1080_P
+}resolution_ratio;
+
+typedef enum
+{
+  //pal
+  TV_SYSTEM_PAL,
+  //ntsc
+  TV_SYSTEM_NTSC,
+  //auto
+  TV_SYSTEM_AUTO,
+}tv_system;
+
+typedef struct
+{
+  unsigned long addr;
+  unsigned long data;
+}reg_data_t;
+
+typedef struct
+{
+  u8 num;
+  reg_data_t array_data[10];
+}reg_cfg_t;
+
+typedef struct
+{
+  hal_fp_type_t fp_type;
+  pan_hw_info_t pan_info;
+  led_bitmap_t led_bitmap[MAX_LED_MAP_NUM];
+  u16 map_size;
+  vdac_info_t vdac_info;
+  spdif_info_t spdif_info;
+  lnb_load_t lnb_load;
+  scart_info_t scart_info;
+  fp_disp_t fp_disp;
+  u8 standby_mode;
+  u8 loop_through;
+  u8 tuner_clock; //0-demo 1-other
+  u8 convention;
+  u8 detect_pin_pol;
+  u8 vcc_enable_pol;
+  BOOL enable_mute_pin;
+  u8 mute_pin;
+  BOOL mute_gpio_level;
+  reg_cfg_t reg;
+  u8 led_num;
+  u32 reserve1;
+  u32 reserve2;
+  u32 reserve3;
+}hw_cfg_t;
+/*!
+    dm load the block data in mem
+  */
+void dm_load_customer_sys_cfg(void);
+
+/*!
+    dm get  the module enable flag  in customer config mem
+  */
+u8 handle_dm_get_customer_module_cfg(EXT_CUS_MODULE_CFG customer_cfg);
+
+/*!
+    dm load the hw cfg block data in mem
+  */
+void dm_load_customer_hw_cfg(void);
+
+/*!
+   dm get the hw config info from flash
+  */
+hw_cfg_t dm_get_hw_cfg_info(void);
+
+void customer_config_init(void);
+
+u8 customer_config_language_num_get(void);
+#endif // END __CUSTOMER_CONFIG_H_

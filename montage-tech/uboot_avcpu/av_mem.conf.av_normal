@@ -1,0 +1,16 @@
+#AVCPU CONFIG (64M|64M_SD|MINI_AV|NORMAL): NORMAL
+#Generate time: Jun 18 2015 19:54:51
+
+setenv avenv_AVCPU_CONFIG NORMAL
+setenv avenv_VDEC_7M_FREEZE_STOP_FLAG 0x1
+setenv avenv_VIDEO_FW_CFG_SIZE 0x2660000
+setenv avenv_VIDEO_FW_CFG_ADDR 0xa56a0000
+setenv avenv_VID_DI_CFG_SIZE 0x2d6000
+setenv avenv_VID_DI_CFG_ADDR 0xa53ca000
+setenv avenv_AUDIO_FW_CFG_SIZE 0x180000
+setenv avenv_AUDIO_FW_CFG_ADDR 0x8523a000
+setenv avenv_VID_SD_WR_BACK_SIZE 0x4bf000
+setenv avenv_VID_SD_WR_BACK_FIELD_NO 0x6
+setenv avenv_VID_SD_WR_BACK_ADDR 0xa4d7ac00
+setenv avenv_FREEZE_MEM_ADDR 0xa4300000
+setenv avenv_FREEZE_MEM_size 0x700000

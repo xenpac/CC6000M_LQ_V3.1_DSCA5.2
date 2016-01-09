@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="core_ap_mdl/core_ap_mdl.cbp" />
+		<Project filename="core_jasmine_drv_open/core_jasmine_drv_open.cbp" active="1" />
+	</Workspace>
+</CodeBlocks_workspace_file>

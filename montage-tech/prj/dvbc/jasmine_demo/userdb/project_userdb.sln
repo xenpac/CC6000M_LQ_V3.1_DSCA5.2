@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "project_userdb_unittest", "project_userdb_unittest\project_userdb_unittest.vcproj", "{EC69EBE4-92A6-4346-A591-13DD971E355C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "project_userdb", "project_userdb\project_userdb.vcproj", "{E6AD31FD-404B-4FD1-B045-A52F4B247059}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sim_mdl_open", "..\..\..\..\config_prj\other\sim_mdl_open\sim_mdl_open.vcproj", "{5BA0609C-A4B9-4059-B6FB-DCB35AC3C69F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC69EBE4-92A6-4346-A591-13DD971E355C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EC69EBE4-92A6-4346-A591-13DD971E355C}.Debug|Win32.Build.0 = Debug|Win32
+		{EC69EBE4-92A6-4346-A591-13DD971E355C}.Release|Win32.ActiveCfg = Release|Win32
+		{EC69EBE4-92A6-4346-A591-13DD971E355C}.Release|Win32.Build.0 = Release|Win32
+		{E6AD31FD-404B-4FD1-B045-A52F4B247059}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E6AD31FD-404B-4FD1-B045-A52F4B247059}.Debug|Win32.Build.0 = Debug|Win32
+		{E6AD31FD-404B-4FD1-B045-A52F4B247059}.Release|Win32.ActiveCfg = Release|Win32
+		{E6AD31FD-404B-4FD1-B045-A52F4B247059}.Release|Win32.Build.0 = Release|Win32
+		{5BA0609C-A4B9-4059-B6FB-DCB35AC3C69F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5BA0609C-A4B9-4059-B6FB-DCB35AC3C69F}.Debug|Win32.Build.0 = Debug|Win32
+		{5BA0609C-A4B9-4059-B6FB-DCB35AC3C69F}.Release|Win32.ActiveCfg = Release|Win32
+		{5BA0609C-A4B9-4059-B6FB-DCB35AC3C69F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

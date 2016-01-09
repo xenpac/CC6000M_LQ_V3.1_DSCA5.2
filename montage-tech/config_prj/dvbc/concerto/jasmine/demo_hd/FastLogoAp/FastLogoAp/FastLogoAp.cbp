@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="FastLogoAp" />
+		<Option pch_mode="2" />
+		<Option compiler="mips24k" />
+		<Build>
+			<Script file="lib_finder.script" />
+			<Target title="Release">
+				<Option output="bin\Release\FastLogoAp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="mips24k" />
+				<Compiler>
+					<Add option="-O2 -EL -march=mips32r2 -mxgot -mabi=32 -mlong-calls -mno-abicalls -Wall -Wno-pointer-sign -Werror -O2 -g -DARCH=WARRIORS  -DWARRIORS=2 -DASSERT_ON -DPRINT_ON -D_ASSEMBLER_ -DCACHE_INIT -DTLB_INIT -ffunction-sections -D${AV_MEM_CONFIG} -D${AV_SD_HD_CONFIG}" />
+					<Add option="-DPRINT_ON" />
+					<Add directory='&quot;${PROJECT_LOC}\inc&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\ap&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\drv&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\hal&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\mdl&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\os&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\util&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\firmware&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\drv\bus&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\drv\drvbase&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\hal\arch&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\mdl\mmi&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\mdl\vfs&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\mdl\eva&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\mdl\filters&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\util\log&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\firmware\core\warriors\include&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\kware&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\FastLogoAp\includes&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\FastLogoAp\includes\ms&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\drv\pdec\alg\djpeg_sw&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\drv\pdec&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\includes&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\includes\memmap_fastlogo&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\inc&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\inc\mdl&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\inc\api&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\prj\dvbc\jasmine_demo\inc\mdl\filters&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\src\drv\drvbase&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\inc\api&quot;' />
+				</Compiler>
+				<Linker>
+					<Add option="--oformat elf32-tradlittlemips --gc-sections -nostdlib -T${PROJECT_DIR}\link.lds -o FastLogoAp.elf -Map FastLogoAp.map" />
+					<Add library="log_dummy" />
+					<Add library="eva_drv_concerto" />
+					<Add library="c" />
+					<Add library="m" />
+					<Add library="gcc" />
+					<Add library="dummy" />
+					<Add library="eva_mdl_concerto" />
+					<Add library="_usb" />
+					<Add library="core_jasmine_drv_open" />
+					<Add library="core_jasmine_drv" />
+					<Add library="core_ap_mdl_mt" />
+					<Add library="core_ap_mdl" />
+					<Add library="show_logo_24k" />
+					<Add directory='&quot;${PROJECT_LOC}\lib\lib_concerto&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\lib\lib_mips24k&quot;' />
+					<Add directory='&quot;${PROJECT_LOC}\lib\lib_kware\mips24k&quot;' />
+				</Linker>
+				<ExtraCommands>
+					<Add after="sh ${PROJECT_DIR}/post_build.sh ${ProjName}.elf" />
+					<Mode after="always" />
+				</ExtraCommands>
+				<Environment>
+					<Variable name="PROJECT_LOC" value="${PROJECT_DIR}..\..\..\..\..\..\.." />
+					<Variable name="HW_PLATFORM" value="CHIP" />
+					<Variable name="ProjName" value="FastLogoAp" />
+				</Environment>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-DPRINT_ON" />
+		</Compiler>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\FastLogoAp\includes\fast_logo.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\FastLogoAp\includes\fastlogo_display.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\FastLogoAp\sources\ap_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\FastLogoAp\sources\main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\includes\sys_devs.h" />
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\sources\mem_cfg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\..\..\..\prj\dvbc\jasmine_demo\sysstatus\sys_status.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

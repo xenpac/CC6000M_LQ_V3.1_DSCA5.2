@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="core_ap_mdl" />
+		<Option pch_mode="2" />
+		<Option compiler="mips24k" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin\Release\libcore_ap_mdl" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj\Release\" />
+				<Option type="2" />
+				<Option compiler="mips24k" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-EL -march=mips32r2 -mxgot -mlong-calls -mabi=32 -mno-abicalls -Wall -Wno-pointer-sign -O2 -Wno-pointer-to-int-cast  -ffunction-sections"  />
+					<Add option='-MMD -MP -MF&quot;$object.d&quot; -MT&quot;$object.d&quot;' />
+					<Add option="-DASSERT_ON" />
+					<Add option="-D${SECURE}" />
+					<Add option="-DUSE_EXT_HEAP" />
+					<Add directory="$(APP_PATH)\..\msys\1.0\local\mips-windows\lib\gcc\mipsel-unknown-linux-uclibc\4.3.4\include-fixed" />
+					<Add directory="${PROJECT_LOC}\inc" />
+					<Add directory="${PROJECT_LOC}\inc\ap" />
+					<Add directory="${PROJECT_LOC}\inc\api" />
+					<Add directory="${PROJECT_LOC}\inc\drv" />
+					<Add directory="${PROJECT_LOC}\inc\hal" />
+					<Add directory="${PROJECT_LOC}\inc\mdl" />
+					<Add directory="${PROJECT_LOC}\inc\os" />
+					<Add directory="${PROJECT_LOC}\inc\util" />
+					<Add directory="${PROJECT_LOC}\inc\libra" />
+					<Add directory="${PROJECT_LOC}\inc\mboot" />
+					<Add directory="${PROJECT_LOC}\inc\drv\bus" />
+					<Add directory="${PROJECT_LOC}\inc\drv\drvbase" />
+					<Add directory="${PROJECT_LOC}\inc\hal\arch" />
+					<Add directory="${PROJECT_LOC}\inc\util\log" />
+					<Add directory="${PROJECT_LOC}\inc\mdl\eva" />
+					<Add directory="${PROJECT_LOC}\inc\mdl\filters" />
+					<Add directory="${PROJECT_LOC}\inc\mdl\mmi" />
+					<Add directory="${PROJECT_LOC\inc\kware\demux_mp" />
+					<Add directory="${PROJECT_LOC}\src\mdl\mmi\gui\resource\af" />
+					<Add directory="${PROJECT_LOC}\src\mdl\mmi\gui\resource\vf" />
+					<Add directory="${PROJECT_LOC}\src\mdl\mmi\gui\resource\vf\inc" />
+					<Add directory="${PROJECT_LOC}\inc\firmware" />
+					<Add directory="${PROJECT_LOC}\inc\kware" />
+					<Add directory="${PROJECT_LOC}\inc\kware\ts_seq" />
+					<Add directory="${PROJECT_LOC}\src\mdl\vfs" />
+					<Add directory="${PROJECT_LOC\inc\kware\file_playback" />
+					<Add directory="${PROJECT_LOC}\inc\util\iconv" />
+					<Add directory="${PROJECT_LOC}\src\util\lz4" />
+					<Add directory="${PROJECT_LOC}\inc\kware\RSSClient\tinyxml" />
+					<Add directory="${PROJECT_LOC}\inc\kware\aud_descrip" />
+					<Add directory="${PROJECT_LOC}\inc\kware\subt_ttx" />
+					<Add directory="${PROJECT_LOC}\inc\util\glib" />
+					<Add directory="${PROJECT_LOC}\src\mdl\pango" />
+				</Compiler>
+				<ExtraCommands>
+					<Add after="sh ../linux_link_core_ap_mdl.sh core_ap_mdl mips24k" />
+					<Mode after="always" />
+				</ExtraCommands>
+				<Environment>
+					<Variable name="PROJECT_LOC" value="${PROJECT_DIR}..\..\..\.." />
+				</Environment>
+			</Target>
+		</Build>
+		<Unit filename="..\..\..\..\inc\util\abs_util.h" />
+		<Unit filename="..\..\..\..\inc\util\big5.h" />
+		<Unit filename="..\..\..\..\inc\util\char_map.h" />
+		<Unit filename="..\..\..\..\inc\util\class_factory.h" />
+		<Unit filename="..\..\..\..\inc\util\dvbc_util.h" />
+		<Unit filename="..\..\..\..\inc\util\dvbs_util.h" />
+		<Unit filename="..\..\..\..\inc\util\dvbt_util.h" />
+		<Unit filename="..\..\..\..\inc\util\epg_util.h" />
+		<Unit filename="..\..\..\..\inc\util\gb2312.h" />
+		<Unit filename="..\..\..\..\inc\util\iso_639_2.h" />
+		<Unit filename="..\..\..\..\inc\util\iso_6937.h" />
+		<Unit filename="..\..\..\..\inc\util\iso_8859.h" />
+		<Unit filename="..\..\..\..\inc\util\lib_char.h" />
+		<Unit filename="..\..\..\..\inc\util\lib_meml.h" />
+		<Unit filename="..\..\..\..\inc\util\lib_search.h" />
+		<Unit filename="..\..\..\..\inc\util\lib_usals.h" />
+		<Unit filename="..\..\..\..\inc\util\log\log.h" />
+		<Unit filename="..\..\..\..\inc\util\log\log_change_pg_imp.h" />
+		<Unit filename="..\..\..\..\inc\util\log\log_def.h" />
+		<Unit filename="..\..\..\..\inc\util\log\log_dm_imp.h" />
+		<Unit filename="..\..\..\..\inc\util\log\log_dmx_filter_rec_pin_imp.h" />
+		<Unit filename="..\..\..\..\inc\util\log\log_epg_imp.h" />
+		<Unit filename="..\..\..\..\inc\util\log\log_epg_match.h" />
+		<Unit filename="..\..\..\..\inc\util\log\log_flash_imp.h" />
+		<Unit filename="..\..\..\..\inc\util\log\log_interface.h" />
+		<Unit filename="..\..\..\..\inc\util\log\log_mgr.h" />
+		<Unit filename="..\..\..\..\inc\util\log\log_pic_render_filter_imp.h" />
+		<Unit filename="..\..\..\..\inc\util\log\log_scan_imp.h" />
+		<Unit filename="..\..\..\..\inc\util\log\log_subtitle_filter_imp.h" />
+		<Unit filename="..\..\..\..\inc\util\mt_sscanf.h" />
+		<Unit filename="..\..\..\..\inc\util\simple_queue.h" />
+		<Unit filename="..\..\..\..\src\ap\ca\ap_cas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\epg\ap_epg4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\epg\ap_epg_data_process4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\monitor\ap_signal_monitor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\nvod\ap_nvod.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\ota\ap_ota.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\ota\ap_ts_ota.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\playback\ap_playback1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\playback\ap_playback_priv.h" />
+		<Unit filename="..\..\..\..\src\ap\playback\def_ap_playback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\playback\sub_ttx_ctrl1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\scan\ap_blind_scan.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\scan\ap_blind_scan_v2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\scan\ap_dtmb_scan.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\scan\ap_dvbc_scan.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\scan\ap_dvbt_scan.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\scan\ap_scan.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\scan\ap_scan_default.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\scan\ap_scan_priv.h" />
+		<Unit filename="..\..\..\..\src\ap\scan\ap_tp_scan.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\time\ap_time.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\time\ap_time_default.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\time\ap_time_default.h" />
+		<Unit filename="..\..\..\..\src\ap\uio\ap_uio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\upg\ap_upg_priv.h" />
+		<Unit filename="..\..\..\..\src\ap\upg\ap_upgrade.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\upg\p2p_upgrade.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\ap\usb_upg\ap_usb_upg_priv.h" />
+		<Unit filename="..\..\..\..\src\ap\usb_upg\ap_usb_upgrade.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\api\epg\epg_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\api\music\muisc_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\api\ota\ota_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\api\ota\ota_dm_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\api\pvr\pvr_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\api\subt\subt_ttx_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\api\subt\subt_ttx_ctrl_api.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\avctrl\avctrl1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\database\data_base.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\database\data_base16v2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\database\data_base_priv.h" />
+		<Unit filename="..\..\..\..\src\mdl\dm\data_manager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dm\data_manager_priv.h" />
+		<Unit filename="..\..\..\..\src\mdl\dm\data_manager_v2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dm\data_manager_v3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dmx_manager\dmx_manager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\bat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\cat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\dds.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\dsmcc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\ecm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\eit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\emm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\fdt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\mosaic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\nit.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\pat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\pmt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\sdt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\tdt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\tot.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\ts_packet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\dvb\video_packet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\epg_data\epg_data4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\epg_db\epg_database.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\file_list\file_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\av_render_filter\av_render_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\av_render_filter\av_render_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\av_render_filter\av_render_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\av_render_filter\av_render_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\char_filter\char_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\char_filter\char_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\char_filter\char_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\demux_filter\demux_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\demux_filter\demux_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\demux_filter\demux_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\demux_filter\demux_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\demux_filter\pes_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\demux_filter\psi_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\demux_filter\rec_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\epg_filter\epg_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\epg_filter\epg_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\eva_filter_factory.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\file_sink_filter\file_sink_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\file_sink_filter\file_sink_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\file_sink_filter\file_sink_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\file_sink_filter\file_sink_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\file_source_filter\file_source_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\file_source_filter\file_source_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\file_source_filter\file_source_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\file_source_filter\file_source_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\flash_sink_filter\flash_sink_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\flash_sink_filter\flash_sink_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\flash_sink_filter\flash_sink_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\flash_sink_filter\flash_sink_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\mplayer_aud_filter\mplayer_aud_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\mplayer_aud_filter\mplayer_aud_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\mplayer_aud_filter\mplayer_aud_input_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\mplayer_aud_filter\mplayer_aud_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\mplayer_aud_filter\mplayer_aud_lrc_output_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\mplayer_aud_filter\mplayer_aud_lrc_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\mplayer_aud_filter\mplayer_aud_pic_output_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\mplayer_aud_filter\mplayer_aud_pic_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\lrc_decode_filter\lrc_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\lrc_decode_filter\lrc_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\lrc_decode_filter\lrc_input_music_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\lrc_decode_filter\lrc_input_music_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\lrc_decode_filter\lrc_input_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\lrc_decode_filter\lrc_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\lrc_decode_filter\lrc_output_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\lrc_decode_filter\lrc_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_decode_filter\mp3_decode_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_decode_filter\mp3_decode_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_decode_filter\mp3_decode_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_decode_filter\mp3_decode_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_decode_frame.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_input_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_lrc_output_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_lrc_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_output_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_pic_output_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\music_play_filter\mp3_trans_filter\mp3_transfer_pic_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\ota_filter\nim_virtual_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\ota_filter\ota_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\ota_filter\ota_filter_dsmcc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\ota_filter\ota_input_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\ota_filter\ota_output_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_filter\pic_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_filter\pic_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_filter\pic_input_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_filter\pic_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_filter\pic_output_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_filter\pic_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_render_filter\pic_render_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_render_filter\pic_render_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_render_filter\pic_render_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\pic_render_filter\pic_render_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\record_filter\record_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\record_filter\record_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\record_filter\record_input_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\record_filter\record_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\record_filter\record_output_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\record_filter\record_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\str_filter\str_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\str_filter\str_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\str_filter\str_input_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\str_filter\str_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\str_filter\str_output_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\str_filter\str_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_filter\subt_database.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_filter\subt_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_filter\subt_filter_msg.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_filter\subt_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_filter\subt_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\srt_parse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\ssa_parse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_database.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_database.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_input_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_input_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_output_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_output_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_parse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\subt_station_filter\subt_station_parse.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\ts_player_filter\ts_player_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\ts_player_filter\ts_player_filter_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\ts_player_filter\ts_player_in_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\ts_player_filter\ts_player_in_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\filters\ts_player_filter\ts_player_out_pin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\filters\ts_player_filter\ts_player_out_pin_intra.h" />
+		<Unit filename="..\..\..\..\src\mdl\magic_key\magic_key.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mdl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\media_data\media_data.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mgui\frm\frm_comm.h" />
+		<Unit filename="..\..\..\..\src\mdl\mgui\mgdi\mgdi_priv.h" />
+		<Unit filename="..\..\..\..\src\mdl\mgui\mgui\mctrl\mbase\mctrl_priv.h" />
+		<Unit filename="..\..\..\..\src\mdl\mgui\mgui\mres\af\af.h" />
+		<Unit filename="..\..\..\..\src\mdl\mgui\mgui\mres\vf\vf_ft.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\flinger\flinger.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\framework\fw_common.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\framework\fw_desktop.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\framework\fw_message.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\framework\fw_timer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\framework\fw_zorder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gdi\gdi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gdi\gdi_anim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gdi\gdi_bitmap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gdi\gdi_dc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gdi\gdi_format.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gdi\gdi_palette.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gdi\gdi_private.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gdi\gdi_region.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gdi\gdi_roll.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gdi\gdi_vsurf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\base\ctrl_base.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\base\ctrl_common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\base\ctrl_string.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_album.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_bitmap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_block.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_combobox.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_container.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_editbox.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_ipbox.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_matrixbox.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_numbox.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_progressbar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_scrollbar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_setbox.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_textfield.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_timebox.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\control\ctrl_wait.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\paint\gui_paint.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\pango\gui_pango.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\resource\af\af.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\resource\gui_resource.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\resource\vf\vf_ft.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\roll\gui_roll.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\script\gui_xml.cpp" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afangles.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afcjk.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afdummy.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\aferrors.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afglobal.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afhints.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afindic.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\aflatin.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\aflatin2.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afloader.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afmodule.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\aftypes.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\autofit\afwarp.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\base\ftbase.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\bdf\bdf.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\bdf\bdfdrivr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\bdf\bdferror.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftccache.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftccback.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftcerror.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftcglyph.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftcimage.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftcmanag.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftcmru.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cache\ftcsbits.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cffcmap.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cffdrivr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cfferrs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cffgload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cffload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cffobjs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cffparse.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cfftoken.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cff\cfftypes.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cid\ciderrs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cid\cidgload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cid\cidload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cid\cidobjs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cid\cidparse.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cid\cidriver.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\cid\cidtoken.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gxvalid\gxvalid.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gxvalid\gxvcommn.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gxvalid\gxverror.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gxvalid\gxvfeat.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gxvalid\gxvmod.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gxvalid\gxvmort.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gxvalid\gxvmorx.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\infblock.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\infcodes.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\inffixed.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\inftrees.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\infutil.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\zconf.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\zlib.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\gzip\zutil.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\lzw\ftzopen.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\otvalid\otvalid.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\otvalid\otvcommn.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\otvalid\otverror.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\otvalid\otvgpos.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\otvalid\otvmod.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pcf\pcf.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pcf\pcfdrivr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pcf\pcferror.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pcf\pcfread.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pcf\pcfutil.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrcmap.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrdrivr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrerror.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrgload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrobjs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrsbit.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pfr\pfrtypes.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psaux\afmparse.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psaux\psauxerr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psaux\psauxmod.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psaux\psconv.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psaux\psobjs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psaux\t1cmap.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psaux\t1decode.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pshinter\pshalgo.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pshinter\pshglob.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pshinter\pshmod.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pshinter\pshnterr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\pshinter\pshrec.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psnames\psmodule.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psnames\psnamerr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\psnames\pstables.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\raster\ftmisc.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\raster\ftraster.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\raster\ftrend1.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\raster\rasterrs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\sfdriver.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\sferrors.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\sfobjs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\ttbdf.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\ttcmap.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\ttkern.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\ttload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\ttmtx.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\ttpost.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\sfnt\ttsbit.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\smooth\ftgrays.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\smooth\ftsmerrs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\smooth\ftsmooth.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\truetype\ttdriver.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\truetype\tterrors.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\truetype\ttgload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\truetype\ttgxvar.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\truetype\ttinterp.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\truetype\ttobjs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\truetype\ttpload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1afm.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1driver.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1errors.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1gload.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1load.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1objs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1parse.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type1\t1tokens.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type42\t42drivr.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type42\t42error.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type42\t42objs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type42\t42parse.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\type42\t42types.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\winfonts\fnterrs.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\gui\vfont\src\winfonts\winfnt.h" />
+		<Unit filename="..\..\..\..\src\mdl\mmi\mmi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\nim_ctrl\nim_ctrl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\nvod_data\nvod_data.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\services\base\service.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\services\dvb_svc\dvb_svc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\services\dvb_svc\dvb_svc1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\services\monitor_svc\monitor_svc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\services\nim_ctrl_svc\nim_ctrl_svc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\services\pnp_svc\plug_monitor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\services\pnp_svc\pnp_service.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\smc_ctrl\smc_ctrl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\ssctrl\ss_ctrl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\surface\surface.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\mdl\time\time.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\abs_util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\class_factory\class_factory.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\dvbs_util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\dvbt_util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\epg_util\epg_util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\fifo_db\fifo_db.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\iconv\ascii.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\iconv\cp1256.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\iconv\euc_cn.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\iconv\iconv_ext.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\iconv\iso8859_9.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\iconv\ucs2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\iconv\ucs2le.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\iconv\utf8.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lang\big5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lang\char_map.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lang\gb2312.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lang\iso_639_2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lang\iso_6937.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lang\iso_8859.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lang\lib_char.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lang\lib_unicode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lib_usals.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\log\log.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\log\log_mgr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lz4\bench.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lz4\bench.h" />
+		<Unit filename="..\..\..\..\src\util\lz4\lz4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lz4\lz4.h" />
+		<Unit filename="..\..\..\..\src\util\lz4\lz4cli.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lz4\lz4hc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lz4\lz4hc.h" />
+		<Unit filename="..\..\..\..\src\util\lz4\xxhash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\lz4\xxhash.h" />
+		<Unit filename="..\..\..\..\src\util\md5\md5_sign.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\mt_sscanf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\rect\lib_rect.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\simple_q\simple_queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="..\..\..\..\src\util\usb_upginfo_parse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

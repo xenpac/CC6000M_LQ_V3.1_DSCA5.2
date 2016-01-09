@@ -1,0 +1,49 @@
+/*
+ * SNes9x for MOTO EZX Modile Phone
+ * Copyright (C) 2006 OopsWare. CHINA.
+ *
+ * This program is NES_FREE software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *
+ * $Id: snes_player.h,v 0.10 2006/07/13 $
+ */
+
+#ifndef _SNES_PLAYER_
+#define _SNES_PLAYER_
+
+//#include "gamewidget.h"
+
+void run_snes_emulator(const char *);
+
+class SNES_GameWidget : public GameWidget {
+	Q_OBJECT
+public:
+	SNES_GameWidget(QWidget *wg)
+		: GameWidget (wg) {};
+	~SNES_GameWidget() {};
+	
+protected:
+	void doGamePause(bool);
+	bool doGameReset();
+	bool doSaveGame(const char *);
+	bool doLoadGame(const char *);
+	
+	QString doConfigItemPerfix(QString const &) const;
+	
+	int getKeymapCount();
+	struct keymap_item * getKeymapData();
+	
+};
+
+#endif	// _SNES_PLAYER_

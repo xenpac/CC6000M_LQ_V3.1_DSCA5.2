@@ -1,0 +1,15 @@
+config_prj\core
+config_prj\other
+inc
+lib
+src
+uboot_avcpu
+config_prj\dvbc\concerto\jasmine\demo_hd\jasmine_demo_hd
+config_prj\dvbc\concerto\jasmine\demo_hd\jasmine_demo_hd_ota
+config_prj\dvbc\concerto\jasmine\demo_hd\jasmine_demo_hd_x86
+prj\dvbc\jasmine_demo\lib
+prj\dvbc\jasmine_demo\binary
+prj\dvbc\jasmine_demo\customer\demo_hd\jasmine_demo_hd
+prj\dvbc\jasmine_demo\Resource
+prj\dvbc\jasmine_demo\tools
+prj\dvbc\jasmine_demo\sources\ms

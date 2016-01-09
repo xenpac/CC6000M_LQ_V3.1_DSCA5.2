@@ -1,0 +1,6 @@
+; systemconfigsoclib.def : Declares the module parameters for the DLL.
+
+LIBRARY      "systemconfig"
+
+EXPORTS
+    ; Explicit exports can go here
